@@ -3,29 +3,19 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(233, 233, 233);
-}
-.header{
-    z-index: -1;
-    position: absolute;
-    top: 0px;
-    opacity: 0.8;
+
 }
 h1{
     font-size: 100px;
     text-align: center;
     color: blue;
+    position: relative;
     font-family: fantasy;
     background-color: white;
-    position: relative;
     height: 100px;
+    margin-top: 0px;
     line-height: 100px;
-    top: 130px;
     letter-spacing: 8px;
-}
-main{
-    top: 350px;
-    position: relative;
 }
 .botao{
     color: white;
@@ -65,12 +55,66 @@ main{
 .botao02:hover{
     background-color: rgb(0, 0, 104);
 }
-.prin{
+.prin01{
+    background-color: white;
+    width: 620px;
+    height: 380px;
+    padding: 5px 20px 20px 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    /*border-radius: 10px;*/
+    float: right;
+}
+.prin01 > h2{
+    font-size: 20px;
+    margin-left: 40px;
+}
+.prin01 > div{
+    width: 350px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 50px;
+}
+.prin01 > input{
+    margin-left: 50px;
+    background-color: rgb(0, 0, 255);
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    opacity: 0.2;
+}
+.prin02{
+    background-color: white;
+    width: 633px;
+    height: 280px;
+    padding: 5px 20px 20px 20px;
+    margin-left: 5px;
+}
+.prin02 > h2{
+    font-size: 20px;
+    margin-left: 40px;
+}
+.prin02 > div{
+    width: 350px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 50px;
+}
+.prin02 > input{
+    margin-left: 50px;
+    background-color: rgb(0, 0, 255);
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    opacity: 0.2;
+}
+.prin03{
     background-color: white;
     padding: 15px 0px 0px 50px;
     position: relative;
     margin: 15px;
     border-radius: 10px;
+    top: 150px;
 }
 .info01{
     position: relative;
@@ -198,7 +242,7 @@ main{
 }.item06:hover + .info06{
     display: block;
 }
-.prin a{
+.prin03 a{
     text-decoration: none;
     color: blue;
     display: block;
