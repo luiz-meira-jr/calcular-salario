@@ -1,0 +1,206 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(233, 233, 233);
+}
+.header{
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    opacity: 0.8;
+}
+h1{
+    font-size: 100px;
+    text-align: center;
+    color: blue;
+    font-family: fantasy;
+    background-color: white;
+    position: relative;
+    height: 100px;
+    line-height: 100px;
+    top: 130px;
+    letter-spacing: 8px;
+}
+main{
+    top: 350px;
+    position: relative;
+}
+.botao{
+    color: white;
+    background-color: blue;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    position: relative;
+    width: 370px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    float: right;
+    margin-left: 0px;
+    margin-right: 200px;
+    bottom: 50px;
+}
+.botao02{
+    color: white;
+    background-color: blue;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    position: relative;
+    width: 370px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 200px;
+    bottom: 50px;
+}
+.botao:hover{
+    background-color: rgb(0, 0, 104);
+}
+.botao02:hover{
+    background-color: rgb(0, 0, 104);
+}
+.prin{
+    background-color: white;
+    padding: 15px 0px 0px 50px;
+    position: relative;
+    margin: 15px;
+    border-radius: 10px;
+}
+.info01{
+    position: relative;
+    height: 130px;
+    width: 250px;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    border-radius: 0px 15px 15px 15px;
+    font-size: 15px;
+    display: none;
+    padding: 10px;
+    text-align: center;
+    float: right;
+    right: 870px;
+    bottom: 30px;
+    
+}
+.info02{
+    position: relative;
+    height: 140px;
+    width: 600px;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    border-radius: 0px 15px 15px 15px;
+    font-size: 15px;
+    display: none;
+    padding: 10px;
+    text-align: center;
+    float: right;
+    right: 400px;
+    bottom: 30px;
+}
+.info03{
+    position: relative;
+    height: 100px;
+    width: 450px;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    border-radius: 0px 15px 15px 15px;
+    font-size: 15px;
+    display: none;
+    padding: 10px;
+    text-align: center;
+    float: right;
+    right: 588px;
+    bottom: 28px;
+}
+.info04{
+    position: relative;
+    height: 180px;
+    width: 350px;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    border-radius: 15px 15px 15px 0px;
+    font-size: 15px;
+    display: none;
+    padding: 10px;
+    text-align: center;
+    float: right;
+    right: 600px;
+    bottom: 220px;
+}
+.info05{
+    position: relative;
+    height: 150px;
+    width: 250px;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    border-radius: 15px 15px 15px 0px;
+    font-size: 15px;
+    display: none;
+    padding: 10px;
+    text-align: center;
+    float: right;
+    right: 693px;
+    bottom: 190px;
+}
+.info06{
+    position: relative;
+    height: 180px;
+    width: 370px;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    border-radius: 15px 15px 15px 0px;
+    font-size: 15px;
+    display: none;
+    padding: 10px;
+    text-align: center;
+    float: right;
+    right: 448px;
+    bottom: 220px;
+}
+.item01{
+    width: 130px;
+}
+.item02{
+    width: 248px;
+}
+.item03{
+    width: 210px;
+}
+.item04{
+    width: 300px;
+}
+.item05{
+    width: 305px;
+}
+.item06{
+    width: 430px;
+}
+.item01:hover + .info01{
+    display: block;
+}
+.item02:hover + .info02{
+    display: block;
+}
+.item03:hover + .info03{
+    display: block;
+}
+.item04:hover + .info04{
+    display: block;
+}
+.item05:hover + .info05{
+    display: block;
+}.item06:hover + .info06{
+    display: block;
+}
+.prin a{
+    text-decoration: none;
+    color: blue;
+    display: block;
+    padding-bottom: 15px;
+}
