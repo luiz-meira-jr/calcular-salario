@@ -18,11 +18,18 @@ h1{
     margin-top: 0px;
     line-height: 100px;
     letter-spacing: 8px;
-    top: 200px;
+    top: 190px;
 }
 main{
     position: relative;
     top: 400px;
+}
+.first{
+    position: relative;
+    margin-left: 40px;
+    top: 350px;
+    font-size: 20px;
+    color: rgb(56, 56, 56);
 }
 .prin01{
     background-color: white;
@@ -40,7 +47,10 @@ div > strong{
 .st01:hover+span{
     display: block;
 }
-span{
+.st01{
+    width: 115px;
+}
+.st01+span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
@@ -53,6 +63,131 @@ span{
     bottom: 20px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
+}
+.st02:hover+span{
+    display: block;
+}
+.st02{
+    width: 90px;
+}
+.st02+span{
+    position: relative;
+    display: none;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 8px;
+    height: 140px;
+    width: 220px;
+    float: right;
+    right: 250px;
+    bottom: 20px;
+    text-align: center;
+    border-radius: 0px 15px 15px 15px;
+}
+.st03:hover+span{
+    display: block;
+}
+.st03{
+    width: 209px;
+}
+.st03+span{
+    position: relative;
+    display: none;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 8px;
+    height: 115px;
+    width: 220px;
+    float: right;
+    right: 137px;
+    bottom: 20px;
+    text-align: center;
+    border-radius: 0px 15px 15px 15px;
+}
+.st001+span{
+    position: relative;
+    display: none;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 8px;
+    height: 130px;
+    width: 200px;
+    float: right;
+    right: 238px;
+    bottom: 20px;
+    text-align: center;
+    border-radius: 0px 15px 15px 15px;
+}
+.st001:hover+span{
+    display: block;
+}
+.st002+span{
+    position: relative;
+    display: none;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 8px;
+    height: 40px;
+    width: 170px;
+    float: right;
+    right: 40px;
+    bottom: 20px;
+    text-align: center;
+    border-radius: 0px 15px 15px 15px;
+}
+.st002:hover+span{
+    display: block;
+}
+.st003+span{
+    position: relative;
+    display: none;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 8px;
+    height: 60px;
+    width: 200px;
+    float: right;
+    right: 170px;
+    bottom: 20px;
+    text-align: center;
+    border-radius: 0px 15px 15px 15px;
+}
+.st003:hover+span{
+    display: block;
+}
+.st004+span{
+    position: relative;
+    display: none;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 8px;
+    height: 60px;
+    width: 200px;
+    float: right;
+    right: 72px;
+    bottom: 20px;
+    text-align: center;
+    border-radius: 0px 15px 15px 15px;
+}
+.st004:hover+span{
+    display: block;
+}
+.st005+span{
+    position: relative;
+    display: none;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 8px;
+    height: 60px;
+    width: 200px;
+    float: right;
+    right: 163px;
+    bottom: 20px;
+    text-align: center;
+    border-radius: 0px 15px 15px 15px;
+}
+.st005:hover+span{
+    display: block;
 }
 .prin01 > h2{
     font-size: 20px;
@@ -85,7 +220,7 @@ span{
     margin-left: 40px;
 }
 .prin02 > div{
-    width: 210px;
+    /*width: 210px;*/
     height: 35px;
     line-height: 35px;
     margin-left: 50px;
@@ -99,13 +234,45 @@ span{
     font-family: Arial, Helvetica, sans-serif;
     border-width: 0px;
 }
+#cal{
+    width: 120px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    top: 300px;
+    margin-left: 40px;
+}
+#cal:hover{
+    background-color: rgb(0, 0, 140);
+}
+#limp{
+    width: 120px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    top: 300px;
+    margin-left: 50px;
+}
+#limp:hover{
+    border-width: 1px;
+    border-color: black;
+}
 .prin03{
     background-color: white;
     padding: 15px 0px 0px 50px;
     position: relative;
     margin: 15px;
     border-radius: 10px;
-    top: 150px;
+    top: 250px;
 }
 .info01{
     position: relative;
