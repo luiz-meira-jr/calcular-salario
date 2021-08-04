@@ -34,6 +34,7 @@ function calcular1(){
     var vtn3 = vtn.toFixed(2)
     var vts4 = vts.toFixed(2)
     var art = document.getElementsByTagName('article')[0]
+    var posicao = document.getElementsByClassName('prin03')[0]
     t1.innerHTML = `R$ ${r1}`
     t2.innerHTML = `R$ ${r2}`
     t3.innerHTML = `R$ ${r3}`
@@ -43,5 +44,6 @@ function calcular1(){
     r03.innerHTML = `R$ ${vtn3}`
     r04.innerHTML = `R$ ${vts4}`
     art.style.display = 'block'
+    posicao.style.top = '900px'
 }
 
