@@ -17,21 +17,59 @@
             <h2>CALCULADORA DE HORAS EXTRAS</h2>
             <div class="st001">Salário bruto<strong>*</strong></div>
             <span>Salário registrado na carteira de trabalho, remuneração que um trabalhador recebe por mês, sem considerar os descontos oficiais obrigatórios.</span>
-            <input type="number" name="" id="">
+            <input type="number" name="" id="sb">
             <div class="st002">Quantidade de horas trabalhadas no mês<strong>*</strong></div>
-            <span>Quantidadede horas trabalhadasno mês.</span>
-            <input type="number" name="" id="">
+            <span>Quantidade de horas trabalhadasno mês.</span>
+            <input type="number" name="" id="qh">
             <div class="st003">Horas extras normais<strong>*</strong></div>
             <span>Quantidade de horas extras trabalhadas de segunda a sábado.</span>
-            <input type="number" name="" id="">
+            <input type="number" name="" id="he">
             <div class="st004">Horas extras domingos e feriados<strong>*</strong></div>
             <span>Quantidadede horas extras trabalhadas no domingo e/ou feriado.</span>
-            <input type="number" name="" id="">
+            <input type="number" name="" id="hf">
             <div class="st005">Horas extras noturnas<strong>*</strong></div>
             <span>Quantidade de horas extras trabalhadas entre 22h e 5h.</span>
-            <input type="number" name="" id=""> <br> <br>
-            <input id="limp" type="button" value="Limpar">
-            <input id="cal" type="button" value="Calcular">
+            <input type="number" name="" id="hn"> <br> <br>
+            <input id="limp" type="button" value="Limpar" onclick="limpar()">
+            <input id="cal" type="button" value="Calcular" onclick="calcular1()">
+            <article>
+              <p><strong>Valores por hora</strong></p><br>
+                <table>
+                    <tr>
+                       <td class="desc"><strong>Descrição</strong></td><td class="desc"><strong>Valor</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Valor da hora</td><td id="t1"></td>
+                    </tr>
+                    <tr>
+                        <td>Valor da hora extra</td><td id="t2"></td>
+                    </tr>
+                    <tr>
+                        <td>Valor da hora extra domingo e feriado</td><td id="t3"></td>
+                    </tr>
+                    <tr>
+                        <td>Valor da hora extra noturna</td><td id="t4"></td>
+                    </tr>
+                </table>
+                <p><strong>Resultado</strong></p><br>
+                <table>
+                    <tr>
+                       <td class="desc"><strong>Descrição</strong></td><td class="desc"><strong>Valor</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Valor total da hora extra</td><td id="r01"></td>
+                    </tr>
+                    <tr>
+                        <td>Valor total da hora extra domingo e feriado</td><td id="r02"></td>
+                    </tr>
+                    <tr>
+                        <td>Valor total da hora extra noturna</td><td id="r03"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Valor total do salário bruto</strong></td><td id="r04"><strong></strong></td>
+                    </tr>
+                </table>
+            </article>
         </div>
         <div class="prin02">
             <h2>CALCULADORA DE SALÁRIO LÍQUIDO</h2>
@@ -45,8 +83,10 @@
             <span>Pessoa da qual o trabalhador seja tutor ou curador. Pessoa que pode ser incluída no Imposto de Renda do trabalhador como dependente.</span>
             <input type="number" name="" id=""> <br> <br>
             <input id="limp" type="button" value="Limpar">
-            <input id="cal" type="button" value="Calcular">
-            
+            <input id="cal" type="button" value="Calcular" onclick="calcular2()">
+            <article id="r2">
+
+            </article>
         </div>
         <div class="prin03">
             <h2>Referências</h2>
@@ -65,5 +105,6 @@
             <div class="info06">Por fim, é importante conhecer a quantidade de horas extras realizadas aos domingos e feriados também. Isso porque a porcentagem adicional é maior do que as demais, e faz diferença na hora de calcular os seus recebimentos. Todas essas informações devem estar disponíveis para o funcionário no departamento responsável da empresa. Assim, com esses dados, a calculadora de horas extras poderá informar a previsão da remuneração a que você tem direito.</div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

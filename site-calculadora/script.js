@@ -1,0 +1,47 @@
+function calcular1(){
+    var sb = document.getElementById('sb')
+    var qh = document.getElementById('qh')
+    var he = document.getElementById('he')
+    var hf = document.getElementById('hf')
+    var hn = document.getElementById('hn')
+    var n1 = Number(sb.value)
+    var n2 = Number(qh.value)
+    var n3 = Number(he.value)
+    var n4 = Number(hf.value)
+    var n5 = Number(hn.value)
+    var t1 = document.getElementById('t1')
+    var t2 = document.getElementById('t2')
+    var t3 = document.getElementById('t3')
+    var t4 = document.getElementById('t4')
+    var r01 = document.getElementById('r01')
+    var r02 = document.getElementById('r02')
+    var r03 = document.getElementById('r03')
+    var r04 = document.getElementById('r04')
+    var vh = n1 / n2
+    var ve = vh / 2 + vh
+    var vf = vh * 2
+    var vn = vh / 100 * 80 + vh
+    var vte = ve * n3
+    var vtf = vf * n4
+    var vtn = vn * n5
+    var vts = n1 + vte + vtf + vtn
+    var r1 = vh.toFixed(2)
+    var r2 = ve.toFixed(2)
+    var r3 = vf.toFixed(2)
+    var r4 = vn.toFixed(2)
+    var vte1 = vte.toFixed(2)
+    var vtf2 = vtf.toFixed(2)
+    var vtn3 = vtn.toFixed(2)
+    var vts4 = vts.toFixed(2)
+    var art = document.getElementsByTagName('article')[0]
+    t1.innerHTML = `R$ ${r1}`
+    t2.innerHTML = `R$ ${r2}`
+    t3.innerHTML = `R$ ${r3}`
+    t4.innerHTML = `R$ ${r4}`
+    r01.innerHTML = `R$ ${vte1}`
+    r02.innerHTML = `R$ ${vtf2}`
+    r03.innerHTML = `R$ ${vtn3}`
+    r04.innerHTML = `R$ ${vts4}`
+    art.style.display = 'block'
+}
+
