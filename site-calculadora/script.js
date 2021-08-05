@@ -46,4 +46,41 @@ function calcular1(){
     art.style.display = 'block'
     posicao.style.top = '900px'
 }
-
+function calcular2(){
+    var sal = document.getElementById('sal')
+    var desc = document.getElementById('desc')
+    var n01 = Number(sal.value)
+    var n02 = Number(desc.value)
+    var inss1 = document.getElementById('inss1')
+    var inss2 = document.getElementById('inss2')
+    var irrf1 = document.getElementById('irrf1')
+    var irrf2 = document.getElementById('irrf2')
+    var total1 = document.getElementById('total1')
+    var total2 = document.getElementById('total2')
+    var sl1 = document.getElementById('sl1')
+    var x1 = n01 / 100 * 7.5
+    var x01 = n01 - x1
+    var x2 = n01 / 100 * 9
+    var x02 = n01 - x2
+    var x3 = n01 / 100 * 12
+    var x03 = n01 - x3
+    var x4 = n01 / 100 * 14
+    var x04 = n01 - x4
+    var d1 = x1.toFixed(2)
+    var d2 = x2.toFixed(2)
+    var d3 = x3.toFixed(2)
+    var d4 = x4.toFixed(2)
+    var d01 = x01.toFixed(2)
+    var d02 = x02.toFixed(2)
+    var d03 = x03.toFixed(2)
+    var d04 = x04.toFixed(2)
+    var in1 = '7,5%'
+    var in2 = '9%'
+    var in3 = '12%'
+    var in4 = '14%'
+    if (n01 <= 1100){
+        inss1.innerText = `${in1}`
+        inss2.innerText = `${d1}`
+        sl1.innerText = `${d01}`
+    }
+}

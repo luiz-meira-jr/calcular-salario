@@ -75,17 +75,31 @@
             <h2>CALCULADORA DE SALÁRIO LÍQUIDO</h2>
             <div class="st01">Salário bruto<strong>*</strong></div>
             <span>Salário registrado na carteira de trabalho, remuneração que um trabalhador recebe por mês, sem considerar os descontos oficiais obrigatórios.</span>
-            <input type="number" name="" id=""> <br>
+            <input type="number" name="" id="sal"> <br>
             <div class="st02">Descontos<strong>*</strong></div>
             <span>Descontos não oficiais e obrigatórios. Descontos alternativos acordadoscom a sua empresa ou determinação jurídica específica como pensão alimentícia.</span>
-            <input type="number" name="" id=""> <br>
-            <div class="st03">Número de dependentes<strong>*</strong></div>
-            <span>Pessoa da qual o trabalhador seja tutor ou curador. Pessoa que pode ser incluída no Imposto de Renda do trabalhador como dependente.</span>
-            <input type="number" name="" id=""> <br> <br>
+            <input type="number" name="" id="desc"> <br>
             <input id="limp" type="button" value="Limpar">
             <input id="cal" type="button" value="Calcular" onclick="calcular2()">
             <article id="r2">
-
+                Resultado
+                <table>
+                    <tr>
+                        <td class="desc2"><strong>Eventos</strong></td> <td id="desc02"><strong>Alícota Real</strong></td> <td id="desc002"><strong>Descontos</strong></td>
+                    </tr>
+                    <tr>
+                        <td>INSS</td> <td id="inss1"></td> <td id="inss2"></td>
+                    </tr>
+                    <tr>
+                        <td>IRRF</td> <td id="irrf1"></td> <td id="irrf2"></td>
+                    </tr>
+                    <tr>
+                        <td>Totais</td> <td id="total1"></td> <td id="total2"></td>
+                    </tr>
+                    <tr>
+                        <td>Valor salário líquido</td> <td id="sl1"></td>
+                    </tr>
+                </table>
             </article>
         </div>
         <div class="prin03">

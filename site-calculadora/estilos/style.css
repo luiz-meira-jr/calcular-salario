@@ -201,7 +201,7 @@ div > strong{
 }
 .prin01 > input{
     margin-left: 50px;
-    background-color: rgb(209, 209, 255);
+    background-color: rgba(173, 216, 230, 0.377);
     height: 50px;
     width: 300px;
     padding-left: 10px;
@@ -229,7 +229,7 @@ div > strong{
 }
 .prin02 > input{
     margin-left: 50px;
-    background-color: rgb(209, 209, 255);
+    background-color: rgba(173, 216, 230, 0.377);
     height: 50px;
     width: 300px;
     border-radius: 10px;
@@ -276,9 +276,12 @@ div > strong{
     border-radius: 10px;
     top: 270px;
 }
+#r2{
+    top: 650px;
+}
 article{
     margin-top: 40px;
-    display: none;
+    display: ;
 }
 article>p{
     font-size: 20px;
