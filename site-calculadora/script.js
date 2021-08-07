@@ -33,7 +33,7 @@ function calcular1(){
     var vtf2 = vtf.toFixed(2)
     var vtn3 = vtn.toFixed(2)
     var vts4 = vts.toFixed(2)
-    var art = document.getElementsByTagName('article')[0]
+    var art = document.getElementById('r1')
     var posicao = document.getElementsByClassName('prin03')[0]
     t1.innerHTML = `R$ ${r1}`
     t2.innerHTML = `R$ ${r2}`
@@ -47,40 +47,69 @@ function calcular1(){
     posicao.style.top = '900px'
 }
 function calcular2(){
-    var sal = document.getElementById('sal')
-    var desc = document.getElementById('desc')
-    var n01 = Number(sal.value)
-    var n02 = Number(desc.value)
+    var sal = document.getElementById('salario')
+    var desc = document.getElementById('descontos')
+    var valor_salario = Number(salario.value)
+    var valor_descontos = Number(descontos.value)
     var inss1 = document.getElementById('inss1')
     var inss2 = document.getElementById('inss2')
     var irrf1 = document.getElementById('irrf1')
     var irrf2 = document.getElementById('irrf2')
     var total1 = document.getElementById('total1')
     var total2 = document.getElementById('total2')
-    var sl1 = document.getElementById('sl1')
-    var x1 = n01 / 100 * 7.5
-    var x01 = n01 - x1
-    var x2 = n01 / 100 * 9
-    var x02 = n01 - x2
-    var x3 = n01 / 100 * 12
-    var x03 = n01 - x3
-    var x4 = n01 / 100 * 14
-    var x04 = n01 - x4
-    var d1 = x1.toFixed(2)
-    var d2 = x2.toFixed(2)
-    var d3 = x3.toFixed(2)
-    var d4 = x4.toFixed(2)
-    var d01 = x01.toFixed(2)
-    var d02 = x02.toFixed(2)
-    var d03 = x03.toFixed(2)
-    var d04 = x04.toFixed(2)
+    var total_salario_liquido = document.getElementById('sl1')
+    var desconto_7_5 = valor_salario / 100 * 7.5
+    var desconto_inss1 = valor_salario - desconto_7_5
+    var desconto_9 = valor_salario / 100 * 9
+    var desconto_inss2 = valor_salario - desconto_9
+    var desconto_12 = valor_salario / 100 * 12
+    var desconto_inss3 = valor_salario - desconto_12
+    var desconto_14 = valor_salario / 100 * 14
+    var desconto_inss4 = valor_salario - desconto_14
+    var total_desconto_7_5 = desconto_7_5.toFixed(2)
+    var total_desconto_9 = desconto_9.toFixed(2)
+    var total_desconto_12 = desconto_12.toFixed(2)
+    var total_desconto_14 = desconto_14.toFixed(2)
+    var salario_c_desconto1 = desconto_inss1.toFixed(2)
+    var salario_c_desconto2 = desconto_inss2.toFixed(2)
+    var salario_c_desconto3 = desconto_inss3.toFixed(2)
+    var salario_c_desconto4 = desconto_inss4.toFixed(2)
     var in1 = '7,5%'
     var in2 = '9%'
     var in3 = '12%'
     var in4 = '14%'
-    if (n01 <= 1100){
+    var art2 = document.getElementById('r2')
+    if (valor_salario <= 1100){
         inss1.innerText = `${in1}`
-        inss2.innerText = `${d1}`
-        sl1.innerText = `${d01}`
+        inss2.innerText = `R$${total_desconto_7_5}`
+        sl1.innerText = `R$${salario_c_desconto1}`
+        art2.style.display = 'block'
+    } else if (valor_salario > 1100 && valor_salario < 2203.49){
+        inss1.innerText = `${in2}`
+        inss2.innerText = `R$${total_desconto_9}`
+        sl1.innerText = `R$${salario_c_desconto2}`
+        art2.style.display = 'block'
+    } else if (valor_salario > 2.203,48 && valor_salario < 3305.23){
+        inss1.innerText = `${in3}`
+        inss2.innerText = `R$${total_desconto_12}`
+        sl1.innerText = `R$${salario_c_desconto3}`
+        art2.style.display = 'block'
+    } else if(valor_salario > 3.305,22 && valor_salario < 6433.58){
+        inss1.innerText = `${in4}`
+        inss2.innerText = `R$${total_desconto_14}`
+        sl1.innerText = `R$${salario_c_desconto4}`
+        art2.style.display = 'block'
     }
+}
+function limpar(){
+    var sal = document.getElementById('salario')
+    var desc = document.getElementById('descontos')
+    var inss1 = document.getElementById('inss1')
+    var inss2 = document.getElementById('inss2')
+    var irrf1 = document.getElementById('irrf1')
+    var irrf2 = document.getElementById('irrf2')
+    var total1 = document.getElementById('total1')
+    var total2 = document.getElementById('total2')
+    var total_salario_liquido = document.getElementById('sl1')
+    sal.innerHTML = ''
 }
