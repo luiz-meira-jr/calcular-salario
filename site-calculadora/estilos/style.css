@@ -59,7 +59,7 @@ div > strong{
     height: 140px;
     width: 200px;
     float: right;
-    right: 250px;
+    right: 238px;
     bottom: 20px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
@@ -68,7 +68,7 @@ div > strong{
     display: block;
 }
 .st02{
-    width: 90px;
+    width: 95px;
 }
 .st02+span{
     position: relative;
@@ -79,30 +79,13 @@ div > strong{
     height: 140px;
     width: 220px;
     float: right;
-    right: 250px;
+    right: 240px;
     bottom: 20px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.st03:hover+span{
-    display: block;
-}
-.st03{
-    width: 209px;
-}
-.st03+span{
-    position: relative;
-    display: none;
-    background-color: rgb(70, 70, 255);
-    color: white;
-    padding: 8px;
-    height: 115px;
-    width: 220px;
-    float: right;
-    right: 137px;
-    bottom: 20px;
-    text-align: center;
-    border-radius: 0px 15px 15px 15px;
+.st001{
+    width: 115px;
 }
 .st001+span{
     position: relative;
@@ -113,13 +96,16 @@ div > strong{
     height: 130px;
     width: 200px;
     float: right;
-    right: 238px;
-    bottom: 20px;
+    right: 252px;
+    bottom: 22px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
 .st001:hover+span{
     display: block;
+}
+.st002{
+    width: 344px;
 }
 .st002+span{
     position: relative;
@@ -130,13 +116,16 @@ div > strong{
     height: 40px;
     width: 170px;
     float: right;
-    right: 40px;
-    bottom: 20px;
+    right: 54px;
+    bottom: 22px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
 .st002:hover+span{
     display: block;
+}
+.st003{
+    width: 185px;
 }
 .st003+span{
     position: relative;
@@ -147,13 +136,16 @@ div > strong{
     height: 60px;
     width: 200px;
     float: right;
-    right: 170px;
-    bottom: 20px;
+    right: 184px;
+    bottom: 22px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
 .st003:hover+span{
     display: block;
+}
+.st004{
+    width: 282px;
 }
 .st004+span{
     position: relative;
@@ -164,13 +156,16 @@ div > strong{
     height: 60px;
     width: 200px;
     float: right;
-    right: 72px;
-    bottom: 20px;
+    right: 86px;
+    bottom: 22px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
 .st004:hover+span{
     display: block;
+}
+.st005{
+    width: 192px;
 }
 .st005+span{
     position: relative;
@@ -181,8 +176,8 @@ div > strong{
     height: 60px;
     width: 200px;
     float: right;
-    right: 163px;
-    bottom: 20px;
+    right: 178px;
+    bottom: 22px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
