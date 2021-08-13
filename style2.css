@@ -1,0 +1,71 @@
+header > div{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(51, 51, 255);
+    height: 30px;
+}
+.prin01 > h2{
+    font-size: 20px;
+    margin-left: 40px;
+}
+.prin01 > div{
+    width: 350px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 50px;
+}
+.prin01 > input{
+    margin-left: 0px;
+    background-color: rgba(173, 216, 230, 0.377);
+    height: 30px;
+    width: 150px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border-width: 0px;
+}
+.st01:hover+span{
+    display: block;
+}
+.st01{
+    width: 115px;
+}
+.st01+span{
+    position: relative;
+    display: none;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 8px;
+    height: 140px;
+    width: 200px;
+    float: right;
+    right: 238px;
+    bottom: 20px;
+    text-align: center;
+    border-radius: 0px 15px 15px 15px;
+}
+.st02:hover+span{
+    display: block;
+}
+.st02{
+    width: 93px;
+}
+.st02+span{
+    position: relative;
+    display: none;
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 8px;
+    height: 140px;
+    width: 220px;
+    float: right;
+    right: 240px;
+    bottom: 20px;
+    text-align: center;
+    border-radius: 0px 15px 15px 15px;
+}
+div > strong{
+    color: rgb(45, 45, 255);
+    font-size: 15px;
+}
