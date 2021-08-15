@@ -1,71 +1,146 @@
-header > div{
-    margin: 0px;
-    padding: 0px;
-    background-color: rgb(51, 51, 255);
-    height: 30px;
-}
-.prin01 > h2{
-    font-size: 20px;
-    margin-left: 40px;
-}
-.prin01 > div{
-    width: 350px;
-    height: 30px;
-    line-height: 30px;
-    margin-left: 50px;
-}
-.prin01 > input{
-    margin-left: 0px;
-    background-color: rgba(173, 216, 230, 0.377);
-    height: 30px;
-    width: 150px;
-    padding-left: 10px;
-    border-radius: 10px;
+body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+div > h2{
+    width: 400px;
     font-size: 20px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+div + span{
+    display: none;
+}
+span + input{
+    background-color: rgba(173, 216, 230, 0.377);
+    border-radius: 5px;
+    height: 25px;
+    width: 300px;
+    margin-left: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
     border-width: 0px;
 }
-.st01:hover+span{
-    display: block;
+.st01, .st02{
+    margin-left: 80px;
+    padding: 4px;
 }
-.st01{
-    width: 115px;
+.st001, .st002, .st003, .st004, .st005{
+    margin-left: 80px;
+    padding: 4px;
 }
-.st01+span{
-    position: relative;
-    display: none;
-    background-color: rgb(70, 70, 255);
+#cal, #cal2, #limp, #limp2{
+    background-color: blue;
+    border-radius: 9px;
     color: white;
-    padding: 8px;
-    height: 140px;
-    width: 200px;
-    float: right;
-    right: 238px;
-    bottom: 20px;
-    text-align: center;
-    border-radius: 0px 15px 15px 15px;
-}
-.st02:hover+span{
-    display: block;
-}
-.st02{
-    width: 93px;
-}
-.st02+span{
-    position: relative;
-    display: none;
-    background-color: rgb(70, 70, 255);
-    color: white;
-    padding: 8px;
-    height: 140px;
-    width: 220px;
-    float: right;
-    right: 240px;
-    bottom: 20px;
-    text-align: center;
-    border-radius: 0px 15px 15px 15px;
-}
-div > strong{
-    color: rgb(45, 45, 255);
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+    height: 35px;
+    width: 80px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    border-width: 0px;
+}
+.prin03 h2{
+    margin-left: 180px;
+    margin-bottom: 30px;
+}
+.st01 strong, .st02 strong, .st001 strong, .st002 strong, .st003 strong, .st004 strong, .st005 strong{
+    color: blue;
+}
+#r2 p{
+    margin-left: 180px;
+}
+.p2{
+    margin-left: 155px;
+}
+.p1{
+    margin-left: 180px;
+}
+td{
+    height: 30px;
+    width: 205px;
+    padding-left: 8px;
+    outline: solid 1px rgba(173, 216, 230, 0.377);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+.info01{
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+    width: 300px;
+    text-align: center;
+    margin-left: 55px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.info02{
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+    text-align: center;
+    width: 370px;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.info03{
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+    text-align: center;
+    width: 370px;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.info04{
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+    text-align: center;
+    width: 370px;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.info05{
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+    text-align: center;
+    width: 370px;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.info06{
+    background-color: rgb(70, 70, 255);
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+    text-align: center;
+    width: 370px;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.prin03 div{
+    display: none;
+}
+.prin03 p{
+    text-decoration: none;
+    color: blue;
+    margin-left: 15px;
+}
+article{
+    display: none;
 }
