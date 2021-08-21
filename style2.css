@@ -134,7 +134,7 @@ td{
     margin-bottom: 10px;
 }
 .prin03 div{
-    display: none;
+    display: non;
 }
 .prin03 p{
     text-decoration: none;
@@ -142,5 +142,5 @@ td{
     margin-left: 15px;
 }
 article{
-    display: none;
+    display: non;
 }
