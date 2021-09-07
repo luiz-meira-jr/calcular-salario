@@ -102,6 +102,7 @@ function calcular2(){
     var ir4 = '27,5%'
     var art2 = document.getElementById('r2')
     var prin02 = document.getElementsByClassName('prin02')[0]
+    var posicao = document.getElementsByClassName('prin03')[0]
     var total_salario_liquido = document.getElementById('sl1')
         // DESCONTOS INSS
     if (valor_salario <= 1100){
@@ -111,7 +112,8 @@ function calcular2(){
         irrf1.innerHTML = '<strong>ISENTO</strong>'
         irrf2.innerHTML = '<strong>ISENTO</strong>'
         art2.style.display = 'block'
-        prin02.style.top = '200px'
+        prin02.style.top = '300px'
+        posicao.style.top = '1150px'
         // DESCONTOS INSS
     } else if (valor_salario > 1100 && valor_salario <= 1903.98){
         inss1.innerText = `${in2}`

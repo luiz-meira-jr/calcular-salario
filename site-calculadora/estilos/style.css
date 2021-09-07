@@ -477,7 +477,14 @@ td{
     }
     .prin01{
         float: none;
-        width: px;
+    }
+    .st01{
+        display: inline-block;
+        width: 95px;
+    }
+    .st02{
+        display: inline-block;
+        width: 90px;
     }
     body{
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -511,11 +518,12 @@ td{
         width: 400px;
     }
     .st01 + span{
-        right: 259px;
+        right: 260px;
         height: 115px;
+        top: 10px;
     }
     .st02 + span{
-        right: 256px;
+        right: 257px;
         height: 115px;
     }
     .st001 + span{
@@ -544,6 +552,7 @@ td{
     }
     .prin03{
         top: 300px;
+        width: 360px;
     }
     .info01{
         float: none;
