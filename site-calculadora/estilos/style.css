@@ -460,7 +460,7 @@ td{
     display: block;
     padding-bottom: 15px;
 }
-@media screen and (max-width: 500px) {
+/*@media screen and (max-width: 500px) {
     .header{
         position: relative;
         display: none;
