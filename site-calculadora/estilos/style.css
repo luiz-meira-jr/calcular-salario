@@ -29,7 +29,7 @@ main{
     font-size: 20px;
     color: rgb(56, 56, 56);
 }
-.prin01{
+.calculadora_salario_liquido{
     background-color: white;
     width: 620px;
     height: 380px;
@@ -42,13 +42,13 @@ div > strong{
     color: rgb(45, 45, 255);
     font-size: 15px;
 }
-.st01:hover+span{
+.salario_bruto_info:hover+span{
     display: block;
 }
-.st01{
+.salario_bruto_info{
     width: 115px;
 }
-.st01+span{
+.salario_bruto_info+span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
@@ -62,13 +62,13 @@ div > strong{
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.st02:hover+span{
+.descontos_info:hover+span{
     display: block;
 }
-.st02{
+.descontos_info{
     width: 93px;
 }
-.st02+span{
+.descontos_info + span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
@@ -85,7 +85,7 @@ div > strong{
 .st001{
     width: 115px;
 }
-.st001+span{
+.st001 + span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
@@ -182,17 +182,17 @@ div > strong{
 .st005:hover+span{
     display: block;
 }
-.prin01 > h2{
+.calculadora_salario_liquido > h2{
     font-size: 20px;
     margin-left: 40px;
 }
-.prin01 > div{
+.calculadora_salario_liquido > div{
     width: 350px;
     height: 30px;
     line-height: 30px;
     margin-left: 50px;
 }
-.prin01 > input{
+.calculadora_salario_liquido > input{
     margin-left: 50px;
     background-color: rgba(173, 216, 230, 0.377);
     height: 50px;
@@ -208,7 +208,6 @@ div > strong{
     width: 633px;
     height: 280px;
     position: relative;
-    top: 10px;
     padding: 5px 20px 20px 20px;
     margin-left: 5px;
 }
@@ -271,7 +270,7 @@ div > strong{
     border-radius: 10px;
     top: 300px;
 }
-#r2{
+#resultados_salario_liquido{
     top: 650px;
     margin-top: 50px;
     display: none;
@@ -291,12 +290,15 @@ td{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 19px;
 }
-.desc{
+/*#valor_salario_liquido {
+    width: 800px;
+}*/
+.descricao{
     background-color: rgba(173, 216, 230, 0.377);
     text-align: center;
     outline: solid 2px rgba(173, 216, 230, 0.377);    
 }
-#cal2{
+#calcular_liquido{
     width: 120px;
     height: 50px;
     background-color: blue;
@@ -310,10 +312,10 @@ td{
     margin-left: 40px;
     margin-top: 20px;
 }
-#cal2:hover{
+#calcular_liquido:hover{
     background-color: rgb(0, 0, 140);
 }
-#limp2{
+#limpar_salario_liquido{
     width: 120px;
     height: 50px;
     background-color: white;
@@ -325,7 +327,7 @@ td{
     top: 300px;
     margin-left: 50px;
 }
-#limp2:hover{
+#limpar_salario_liquido:hover{
     border-width: 1px;
     border-color: black;
 }

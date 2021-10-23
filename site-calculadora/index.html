@@ -14,21 +14,21 @@
         <h1>CÁLCULOS TRABALHISTAS</h1>
     </header>
     <main>
-        <div class="prin01">
+        <div class="calculadora_salario_liquido"> <!--Primeira div, responsável pelo cálculo do salário líquido-->
             <h2>CALCULADORA DE SALÁRIO LÍQUIDO</h2>
-            <div class="st01">Salário bruto<strong>*</strong></div>
+            <div class="salario_bruto_info">Salário bruto<strong>*</strong></div><!-- st01 => salario_bruto_info -->
             <span>Salário registrado na carteira de trabalho, remuneração que um trabalhador recebe por mês, sem considerar os descontos oficiais obrigatórios.</span>
-            <input type="number" name="salario" id="salario"> <br>
-            <div class="st02">Descontos<strong>*</strong></div>
-            <span>Descontos não oficiais e obrigatórios. Descontos alternativos acordadoscom a sua empresa ou determinação jurídica específica como pensão alimentícia.</span>
-            <input type="number" name="descontos" id="descontos"> <br>
-            <input id="limp2" type="button" value="Limpar">
-            <input id="cal2" type="button" value="Calcular" onclick="calcular2()">
-            <article id="r2">
+            <input type="number" name="salario" id="campo_salario_bruto"> <br> <!-- salario => campo_salario_bruto -->
+            <div class="descontos_info">Descontos<strong>*</strong></div> <!-- st02 => descontos_info -->
+            <span>Descontos não oficiais e obrigatórios. Descontos alternativos acordados com a sua empresa ou determinação jurídica específica como pensão alimentícia.</span>
+            <input type="number" name="descontos" id="campo_descontos"> <br> <!-- descontos => campo_descontos -->
+            <input id="limpar_salario_liquido" type="button" value="Limpar"> <!-- limp2 => limpar_salario_liquido -->
+            <input id="calcular_liquido" type="button" value="Calcular" onclick="calcular_liquido()"> <!-- cal2 => calcular_liquido -->
+            <article id="resultados_salario_liquido"> <!-- r2=> resultados_salario_liquido -->
                 <p><strong>Resultado</strong></p><br>
                 <table>
                     <tr>
-                        <td class="desc"><strong>Eventos</strong></td> <td class="desc"><strong>Alícota Real</strong></td> <td class="desc"><strong>Descontos</strong></td>
+                        <td class="descricao"><strong>Eventos</strong></td> <td class="descricao"><strong>Alícota Real</strong></td> <td class="descricao"><strong>Descontos</strong></td> <!-- desc => descricao-->
                     </tr>
                     <tr>
                         <td>INSS</td> <td id="inss1"></td> <td id="inss2"></td>
@@ -37,10 +37,7 @@
                         <td>IRRF</td> <td id="irrf1"></td> <td id="irrf2"></td>
                     </tr>
                     <tr>
-                        <td>Totais</td> <td id="total1"></td> <td id="total2"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Valor salário líquido</strong></td> <td id="sl1"></td>
+                        <td><strong>Valor salário líquido</strong></td> <td id="valor_salario_liquido"></td> <!-- sl1 => valor_salario_liquido -->
                     </tr>
                 </table>
             </article>
@@ -63,7 +60,7 @@
             <span>Quantidade de horas extras trabalhadas entre 22h e 5h.</span>
             <input type="number" name="" id="hn"> <br> <br>
             <input id="limp" type="button" value="Limpar">
-            <input id="cal" type="button" value="Calcular" onclick="calcular1()">
+            <input id="cal" type="button" value="Calcular" onclick="calcular_horas()">
             <article id="r1">
               <p class="p2"><strong>Valores por hora</strong></p><br>
                 <table>

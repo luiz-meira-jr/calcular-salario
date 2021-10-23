@@ -1,4 +1,4 @@
-function calcular1(){
+function calcular_horas(){
     var sb = document.getElementById('sb')
     var qh = document.getElementById('qh')
     var he = document.getElementById('he')
@@ -46,17 +46,15 @@ function calcular1(){
     art.style.display = 'block'
     posicao.style.top = '950px'
 }
-function calcular2(){
-    var sal = document.getElementById('salario')
-    var desc = document.getElementById('descontos')
+function calcular_liquido(){
+    var sal = document.getElementById('campo_salario_bruto')
+    var desc = document.getElementById('campo_descontos')
     var valor_salario = Number(sal.value)
     var valor_descontos = Number(desc.value)
     var inss1 = document.getElementById('inss1')
     var inss2 = document.getElementById('inss2')
     var irrf1 = document.getElementById('irrf1')
     var irrf2 = document.getElementById('irrf2')
-    var total1 = document.getElementById('total1')
-    var total2 = document.getElementById('total2')
     // DESCONTOS INSS
     var desconto_7_5 = valor_salario / 100 * 7.5
     var desconto_9 = valor_salario / 100 * 9
@@ -100,10 +98,9 @@ function calcular2(){
     var ir2 = '15%'
     var ir3 = '22,5%'
     var ir4 = '27,5%'
-    var art2 = document.getElementById('r2')
-    var prin02 = document.getElementsByClassName('prin02')[0]
+    var art2 = document.getElementById('resultados_salario_liquido')
     var posicao = document.getElementsByClassName('prin03')[0]
-    var total_salario_liquido = document.getElementById('sl1')
+    var total_salario_liquido = document.getElementById('valor_salario_liquido')
         // DESCONTOS INSS
     if (valor_salario <= 1100){
         inss1.innerText = `${in1}`
@@ -112,7 +109,6 @@ function calcular2(){
         irrf1.innerHTML = '<strong>ISENTO</strong>'
         irrf2.innerHTML = '<strong>ISENTO</strong>'
         art2.style.display = 'block'
-        prin02.style.top = '300px'
         posicao.style.top = '1150px'
         // DESCONTOS INSS
     } else if (valor_salario > 1100 && valor_salario <= 1903.98){
@@ -122,7 +118,6 @@ function calcular2(){
         irrf2.innerHTML = '<strong>ISENTO</strong>'
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_c_desconto2}</strong>`
         art2.style.display = 'block'
-        prin02.style.top = '280px'
         // DESCONTOS IRRF    
     } else if (valor_salario > 1903.98 && valor_salario <= 2203.48){
         inss1.innerText = `${in2}`
@@ -131,7 +126,6 @@ function calcular2(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf1}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_9_7_5}</strong>`
         art2.style.display = 'block'
-        prin02.style.top = '280px'
         // DESCONTOS INSS
     } else if (valor_salario > 2203.48 && valor_salario <= 2826.65){
         inss1.innerText = `${in3}`
@@ -140,7 +134,6 @@ function calcular2(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf1}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_12_7_5}</strong>`
         art2.style.display = 'block'
-        prin02.style.top = '280px'
     } else if (valor_salario > 2826.65 && valor_salario <= 3305.23){
         inss1.innerText = `${in3}`
         inss2.innerText = `R$ ${total_desconto_12}`
@@ -148,7 +141,6 @@ function calcular2(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf2}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_12_15}</strong>`
         art2.style.display = 'block'
-        prin02.style.top = '280px'
         // DESCONTOS IRRF
     } else if (valor_salario > 3305.23 && valor_salario <= 3751.05){
         inss1.innerText = `${in4}`
@@ -157,7 +149,6 @@ function calcular2(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf2}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_14_15}</strong>`
         art2.style.display = 'block'
-        prin02.style.top = '280px'
         // DESCONTOS INSS
     } else if (valor_salario > 3751.05 && valor_salario < 4664.68){
         inss1.innerText = `${in4}`
@@ -166,7 +157,6 @@ function calcular2(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf3}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_14_22_5}</strong>`
         art2.style.display = 'block'
-        prin02.style.top = '280px'
         // DESCONTOS IRRF
     } else if (valor_salario <= 4664.68 && valor_salario <= 6433.57){
         inss1.innerText = `${in4}`
@@ -175,6 +165,5 @@ function calcular2(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf4}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_14_27_5}</strong>`
         art2.style.display = 'block'
-        prin02.style.top = '280px'
     }
 }
