@@ -24,7 +24,7 @@
             <input type="number" name="descontos" id="campo_descontos"> <br> <!-- descontos => campo_descontos -->
             <input id="limpar_salario_liquido" type="button" value="Limpar"> <!-- limp2 => limpar_salario_liquido -->
             <input id="calcular_liquido" type="button" value="Calcular" onclick="calcular_liquido()"> <!-- cal2 => calcular_liquido -->
-            <article id="resultados_salario_liquido"> <!-- r2=> resultados_salario_liquido -->
+            <article id="resultados_salario_liquido"> <!-- r2 => resultados_salario_liquido -->
                 <p><strong>Resultado</strong></p><br>
                 <table>
                     <tr>
@@ -42,79 +42,79 @@
                 </table>
             </article>
         </div>
-        <div class="prin02">
+        <div class="calculadora_horas_extras"> <!-- prin02 => calculadora_horas_extras -->
             <h2>CALCULADORA DE HORAS EXTRAS</h2>
-            <div class="st001">Salário bruto<strong>*</strong></div>
+            <div class="salario_bruto_horas_info">Salário bruto<strong>*</strong></div> <!-- st001 => salario_bruto_horas_info -->
             <span>Salário registrado na carteira de trabalho, remuneração que um trabalhador recebe por mês, sem considerar os descontos oficiais obrigatórios.</span>
-            <input type="number" name="" id="sb">
-            <div class="st002">Quantidade de horas trabalhadas no mês<strong>*</strong></div>
+            <input type="number" name="" id="campo_salario_bruto_horas"> <!-- sb => campo_salario_bruto_horas -->
+            <div class="quantidade_horas_info">Quantidade de horas trabalhadas no mês<strong>*</strong></div> <!-- st002 => quantidade_horas_info -->
             <span>Quantidade de horas trabalhadas no mês.</span>
-            <input type="number" name="" id="qh">
-            <div class="st003">Horas extras normais<strong>*</strong></div>
+            <input type="number" name="" id="campo_quantidade_horas"> <!-- qh => campo_quantidade_horas -->
+            <div class="horas_extras_info">Horas extras normais<strong>*</strong></div> <!-- st003 => horas_extras_info -->
             <span>Quantidade de horas extras trabalhadas de segunda a sábado.</span>
-            <input type="number" name="" id="he">
-            <div class="st004">Horas extras domingos e feriados<strong>*</strong></div>
+            <input type="number" name="" id="campo_horas_extras"> <!-- he => campo_horas_extras -->
+            <div class="horas_feriados_info">Horas extras domingos e feriados<strong>*</strong></div> <!-- st004 => horas_feriados_info -->
             <span>Quantidadede horas extras trabalhadas no domingo e/ou feriado.</span>
-            <input type="number" name="" id="hf">
-            <div class="st005">Horas extras noturnas<strong>*</strong></div>
+            <input type="number" name="" id="campo_horas_feriados"> <!-- hf => campo_horas_feriados -->
+            <div class="horas_extras_noturnas_info">Horas extras noturnas<strong>*</strong></div> <!-- st005 => horas_extras_noturnas_info -->
             <span>Quantidade de horas extras trabalhadas entre 22h e 5h.</span>
-            <input type="number" name="" id="hn"> <br> <br>
-            <input id="limp" type="button" value="Limpar">
-            <input id="cal" type="button" value="Calcular" onclick="calcular_horas()">
-            <article id="r1">
-              <p class="p2"><strong>Valores por hora</strong></p><br>
+            <input type="number" name="" id="campo_horas_extras_noturnas"> <br> <br> <!-- hn => campo_horas_extras_noturnas -->
+            <input id="limpar_horas_extras" type="button" value="Limpar"> <!-- limp => limpar_horas_extras -->
+            <input id="calcular_horas" type="button" value="Calcular" onclick="calcular_horas()"> <!-- cal => calcular_horas -->
+            <article id="resultados_horas_extras"> <!-- r1 => resultados_horas_extras -->
+              <p><strong>Valores por hora</strong></p><br>
                 <table>
                     <tr>
-                       <td class="desc"><strong>Descrição</strong></td><td class="desc"><strong>Valor</strong></td>
+                       <td class="descricao"><strong>Descrição</strong></td><td class="descricao"><strong>Valor</strong></td> <!-- desc => descricao -->
                     </tr>
                     <tr>
-                        <td>Valor da hora</td><td id="t1"></td>
+                        <td>Valor da hora</td><td id="valor_horas"></td><!-- t1 => valor_horas -->
                     </tr>
                     <tr>
-                        <td>Valor da hora extra</td><td id="t2"></td>
+                        <td>Valor da hora extra</td><td id="valor_horas_extras"></td> <!-- t2 => valor_horas_extras -->
                     </tr>
                     <tr>
-                        <td>Valor da hora extra domingo e feriado</td><td id="t3"></td>
+                        <td>Valor da hora extra domingo e feriado</td><td id="valor_horas_feriados"></td> <!-- t3 => valor_horas_feriados -->
                     </tr>
                     <tr>
-                        <td>Valor da hora extra noturna</td><td id="t4"></td>
+                        <td>Valor da hora extra noturna</td><td id="valor_hora_noturna"></td> <!-- t4 => valor_hora_noturna -->
                     </tr>
                 </table>
-                <p class="p1"><strong>Resultado</strong></p><br>
+                <p><strong>Resultado</strong></p><br>
                 <table>
                     <tr>
-                       <td class="desc"><strong>Descrição</strong></td><td class="desc"><strong>Valor</strong></td>
+                       <td class="descricao"><strong>Descrição</strong></td><td class="descricao"><strong>Valor</strong></td> <!-- desc => descricao -->
                     </tr>
                     <tr>
-                        <td>Valor total da hora extra</td><td id="r01"></td>
+                        <td>Valor total da hora extra</td><td id="total_hora_extra"></td> <!-- r01 => total_hora_extra -->
                     </tr>
                     <tr>
-                        <td>Valor total da hora extra domingo e feriado</td><td id="r02"></td>
+                        <td>Valor total da hora extra domingo e feriado</td><td id="total_hora_feriado"></td> <!-- r02 => total_hora_feriado -->
                     </tr>
                     <tr>
-                        <td>Valor total da hora extra noturna</td><td id="r03"></td>
+                        <td>Valor total da hora extra noturna</td><td id="r03"></td> <!-- r03 => total_hora_noturna -->
                     </tr>
                     <tr>
-                        <td><strong>Valor total do salário bruto</strong></td><td id="r04"></td>
+                        <td><strong>Valor total do salário bruto</strong></td><td id="total_salario_bruto"></td> <!-- r04 => total_salario_bruto -->
                     </tr>
                 </table>
             </article>
         </div>
-        <div class="prin03">
+        <div id="referencias"> <!-- prin03 => referencias -->
             <h2>Referências</h2>
-            <a class="item01" href="#">Oque é salário?</a>
-            <div class="info01">Trata-se da remuneração mensal básica recebida pelo funcionário, definida no momento da contratação. Essa é a base para definir o valor-hora e, posteriormente, o adicional de trabalho excedente.</div>
-            <a class="item02" href="#">Como saber a jornada mensal</a>
-            <div class="info02">Também é importante saber a jornada mensal de trabalho, ou seja, quantas horas de serviço você realiza por mês. Para isso, basta multiplicar a jornada diária pelo número de dias trabalhados na semana, e, em seguida, multiplicar esse valor por 4, o número de semanas úteis em um mês. Por exemplo, se você trabalha de segunda a sexta, das 09h às 18h, com uma hora de intervalo, sua jornada diária é de 8 horas. Dessa forma, o número de horas trabalhadas em uma semana será 40. Multiplicando por 4, a jornada mensal será de 160 horas.</div>
-            <a class="item03" href="#">Valor da hora de trabalho</a>
-            <div class="info03">A calculadora de horas extras pode calcular o valor da hora de trabalho automaticamente, mas, se desejar conhecer essa informação, basta dividir o salário pela jornada mensal. Conforme explicamos acima, ele indicará o valor da hora da sua hora de trabalho.
-            </div>
-            <a class="item04" href="#">Quantidade de horas extras normais</a>
-            <div class="info04">O sistema também irá solicitar o número de horas extras normais feitas no mês. Por isso, é importante ter esse acompanhamento periódico. Caso não tenha um monitoramento próprio, é possível solicitar essa quantidade no setor de Recursos Humanos da empresa. Geralmente, empresas que possuem registro de ponto também possibilitam a consulta na plataforma utilizada, ou através de impressão dos dados.</div>
-            <a class="item05" href="#">Quantidade de horas extras noturnas</a>
-            <div class="info05">Conforme explicamos anteriormente, as horas extras noturnas recebem um adicional superior às normais. Por esse motivo, a calculadora de horas extras solicita essa informação, para retornar uma estimativa mais concreta.</div>
-            <a class="item06" href="#">Quantidade de horas extras aos domingos e feriados</a>
-            <div class="info06">Por fim, é importante conhecer a quantidade de horas extras realizadas aos domingos e feriados também. Isso porque a porcentagem adicional é maior do que as demais, e faz diferença na hora de calcular os seus recebimentos. Todas essas informações devem estar disponíveis para o funcionário no departamento responsável da empresa. Assim, com esses dados, a calculadora de horas extras poderá informar a previsão da remuneração a que você tem direito.</div>
+            <a class="referencia1" href="#">Oque é salário?</a> <!-- item01 => referencia1 -->
+            <div class="info1">Trata-se da remuneração mensal básica recebida pelo funcionário, definida no momento da contratação. Essa é a base para definir o valor-hora e, posteriormente, o adicional de trabalho excedente.</div> <!-- info01 => info1 -->
+            <a class="referencia2" href="#">Como saber a jornada mensal</a> <!-- item02 => referencia2 -->
+            <div class="info2">Também é importante saber a jornada mensal de trabalho, ou seja, quantas horas de serviço você realiza por mês. Para isso, basta multiplicar a jornada diária pelo número de dias trabalhados na semana, e, em seguida, multiplicar esse valor por 4, o número de semanas úteis em um mês. Por exemplo, se você trabalha de segunda a sexta, das 09h às 18h, com uma hora de intervalo, sua jornada diária é de 8 horas. Dessa forma, o número de horas trabalhadas em uma semana será 40. Multiplicando por 4, a jornada mensal será de 160 horas.</div> <!-- info02 => info2 -->
+            <a class="referencia3" href="#">Valor da hora de trabalho</a> <!-- item03 => referencia3 -->
+            <div class="info3">A calculadora de horas extras pode calcular o valor da hora de trabalho automaticamente, mas, se desejar conhecer essa informação, basta dividir o salário pela jornada mensal. Conforme explicamos acima, ele indicará o valor da hora da sua hora de trabalho.
+            </div> <!-- info03 => info3 -->
+            <a class="referencia4" href="#">Quantidade de horas extras normais</a> <!-- item04 => referencia4 -->
+            <div class="info4">O sistema também irá solicitar o número de horas extras normais feitas no mês. Por isso, é importante ter esse acompanhamento periódico. Caso não tenha um monitoramento próprio, é possível solicitar essa quantidade no setor de Recursos Humanos da empresa. Geralmente, empresas que possuem registro de ponto também possibilitam a consulta na plataforma utilizada, ou através de impressão dos dados.</div> <!-- info04 => info4 -->
+            <a class="referencia5" href="#">Quantidade de horas extras noturnas</a> <!-- item05 => referencia5 -->
+            <div class="info5">Conforme explicamos anteriormente, as horas extras noturnas recebem um adicional superior às normais. Por esse motivo, a calculadora de horas extras solicita essa informação, para retornar uma estimativa mais concreta.</div> <!-- info05 => info5 -->
+            <a class="referencia6" href="#">Quantidade de horas extras aos domingos e feriados</a> <!-- item06 => referencia6 -->
+            <div class="info6">Por fim, é importante conhecer a quantidade de horas extras realizadas aos domingos e feriados também. Isso porque a porcentagem adicional é maior do que as demais, e faz diferença na hora de calcular os seus recebimentos. Todas essas informações devem estar disponíveis para o funcionário no departamento responsável da empresa. Assim, com esses dados, a calculadora de horas extras poderá informar a previsão da remuneração a que você tem direito.</div> <!-- info06 => info6 -->
         </div>
     </main>
     <script src="script.js"></script>

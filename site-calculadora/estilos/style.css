@@ -82,10 +82,10 @@ div > strong{
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.st001{
+.salario_bruto_horas_info{
     width: 115px;
 }
-.st001 + span{
+.salario_bruto_horas_info + span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
@@ -99,13 +99,13 @@ div > strong{
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.st001:hover+span{
+.salario_bruto_horas_info:hover+span{
     display: block;
 }
-.st002{
+.quantidade_horas_info{
     width: 344px;
 }
-.st002+span{
+.quantidade_horas_info + span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
@@ -119,13 +119,13 @@ div > strong{
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.st002:hover+span{
+.quantidade_horas_info:hover+span{
     display: block;
 }
-.st003{
+.horas_extras_info{
     width: 185px;
 }
-.st003+span{
+.horas_extras_info + span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
@@ -139,13 +139,13 @@ div > strong{
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.st003:hover+span{
+.horas_extras_info:hover+span{
     display: block;
 }
-.st004{
+.horas_feriados_info{
     width: 282px;
 }
-.st004+span{
+.horas_feriados_info + span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
@@ -159,13 +159,13 @@ div > strong{
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.st004:hover+span{
+.horas_feriados_info:hover+span{
     display: block;
 }
-.st005{
+.horas_extras_noturnas_info{
     width: 192px;
 }
-.st005+span{
+.horas_extras_noturnas_info + span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
@@ -179,7 +179,7 @@ div > strong{
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.st005:hover+span{
+.horas_extras_noturnas_info:hover+span{
     display: block;
 }
 .calculadora_salario_liquido > h2{
@@ -203,7 +203,7 @@ div > strong{
     font-size: 20px;
     border-width: 0px;
 }
-.prin02{
+.calculadora_horas_extras{
     background-color: white;
     width: 633px;
     height: 280px;
@@ -211,16 +211,16 @@ div > strong{
     padding: 5px 20px 20px 20px;
     margin-left: 5px;
 }
-.prin02 > h2{
+.calculadora_horas_extras > h2{
     font-size: 20px;
     margin-left: 40px;
 }
-.prin02 > div{
+.calculadora_horas_extras > div{
     height: 35px;
     line-height: 35px;
     margin-left: 50px;
 }
-.prin02 > input{
+.calculadora_horas_extras > input{
     margin-left: 50px;
     background-color: rgba(173, 216, 230, 0.377);
     height: 50px;
@@ -230,7 +230,7 @@ div > strong{
     font-size: 20px;
     border-width: 0px;
 }
-#cal{
+#calcular_horas{
     width: 120px;
     height: 50px;
     background-color: blue;
@@ -243,10 +243,10 @@ div > strong{
     top: 300px;
     margin-left: 40px;
 }
-#cal:hover{
+#calcular_horas:hover{
     background-color: rgb(0, 0, 140);
 }
-#limp{
+#limpar_horas_extras{
     width: 120px;
     height: 50px;
     background-color: white;
@@ -258,11 +258,11 @@ div > strong{
     top: 300px;
     margin-left: 50px;
 }
-#limp:hover{
+#limpar_horas_extras:hover{
     border-width: 1px;
     border-color: black;
 }
-.prin03{
+#referencias{
     background-color: white;
     padding: 15px 0px 0px 50px;
     position: relative;
@@ -275,7 +275,7 @@ div > strong{
     margin-top: 50px;
     display: none;
 }
-#r1{
+#resultados_horas_extras{
     margin-top: 50px;
     display: none;
 }
@@ -331,7 +331,7 @@ td{
     border-width: 1px;
     border-color: black;
 }
-.info01{
+.info1{
     position: relative;
     height: 130px;
     width: 250px;
@@ -346,7 +346,7 @@ td{
     right: 870px;
     bottom: 30px;
 }
-.info02{
+.info2{
     position: relative;
     height: 140px;
     width: 600px;
@@ -361,7 +361,7 @@ td{
     right: 400px;
     bottom: 30px;
 }
-.info03{
+.info3{
     position: relative;
     height: 100px;
     width: 450px;
@@ -376,7 +376,7 @@ td{
     right: 588px;
     bottom: 28px;
 }
-.info04{
+.info4{
     position: relative;
     height: 180px;
     width: 350px;
@@ -391,7 +391,7 @@ td{
     right: 600px;
     bottom: 220px;
 }
-.info05{
+.info5{
     position: relative;
     height: 150px;
     width: 250px;
@@ -406,7 +406,7 @@ td{
     right: 693px;
     bottom: 190px;
 }
-.info06{
+.info6{
     position: relative;
     height: 180px;
     width: 370px;
@@ -421,42 +421,43 @@ td{
     right: 448px;
     bottom: 220px;
 }
-.item01{
+.referencia1{
     width: 130px;
 }
-.item02{
+.referencia2{
     width: 248px;
 }
-.item03{
+.referencia3{
     width: 210px;
 }
-.item04{
+.referencia4{
     width: 300px;
 }
-.item05{
+.referencia5{
     width: 305px;
 }
-.item06{
+.referencia6{
     width: 430px;
 }
-.item01:hover + .info01{
+.referencia1:hover + .info1{
     display: block;
 }
-.item02:hover + .info02{
+.referencia2:hover + .info2{
     display: block;
 }
-.item03:hover + .info03{
+.referencia3:hover + .info3{
     display: block;
 }
-.item04:hover + .info04{
+.referencia4:hover + .info4{
     display: block;
 }
-.item05:hover + .info05{
+.referencia5:hover + .info5{
     display: block;
-}.item06:hover + .info06{
+
+}.referencia6:hover + .info6{
     display: block;
 }
-.prin03 a{
+#referencias a{
     text-decoration: none;
     color: blue;
     display: block;
@@ -495,7 +496,7 @@ td{
         display: inline-block;
         width: 320px;
     }
-    .prin02 > h2{
+    .calculadora_horas_extras > h2{
         display: inline-block;
         width: 300px;
     }
@@ -515,7 +516,7 @@ td{
         font-size: 10px;
         border-width: 0px;
     }
-    .prin02{
+    .calculadora_horas_extras{
         top: 0px;
         width: 400px;
     }
@@ -528,31 +529,31 @@ td{
         right: 257px;
         height: 115px;
     }
-    .st001 + span{
+    .salario_bruto_horas_info + span{
         right: 273px;
         height: 115px;
     }
-    .st002 + span{
+    .quantidade_horas_info + span{
         right: 189px;
         height: 80px;
         width: 100px;
     }
-    .st003 + span{
+    .horas_extras_info + span{
         right: 220px;
     }
-    .st004 + span{
+    .horas_feriados_info + span{
         right: 211px;
         height: 96px;
         width: 130px;
     }
-    .st005 + span{
+    .horas_extras_noturnas_info + span{
         right: 215px;
         height: 50px;
     }
     article{
         width: 420px;
     }
-    .prin03{
+    .referencias{
         top: 300px;
         width: 360px;
     }
