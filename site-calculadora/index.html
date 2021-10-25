@@ -22,7 +22,6 @@
             <div class="descontos_info">Descontos<strong>*</strong></div> <!-- st02 => descontos_info -->
             <span>Descontos não oficiais e obrigatórios. Descontos alternativos acordados com a sua empresa ou determinação jurídica específica como pensão alimentícia.</span>
             <input type="number" name="descontos" id="campo_descontos"> <br> <!-- descontos => campo_descontos -->
-            <input id="limpar_salario_liquido" type="button" value="Limpar"> <!-- limp2 => limpar_salario_liquido -->
             <input id="calcular_liquido" type="button" value="Calcular" onclick="calcular_liquido()"> <!-- cal2 => calcular_liquido -->
             <article id="resultados_salario_liquido"> <!-- r2 => resultados_salario_liquido -->
                 <p><strong>Resultado</strong></p><br>
@@ -59,9 +58,8 @@
             <div class="horas_extras_noturnas_info">Horas extras noturnas<strong>*</strong></div> <!-- st005 => horas_extras_noturnas_info -->
             <span>Quantidade de horas extras trabalhadas entre 22h e 5h.</span>
             <input type="number" name="" id="campo_horas_extras_noturnas"> <br> <br> <!-- hn => campo_horas_extras_noturnas -->
-            <input id="limpar_horas_extras" type="button" value="Limpar"> <!-- limp => limpar_horas_extras -->
             <input id="calcular_horas" type="button" value="Calcular" onclick="calcular_horas()"> <!-- cal => calcular_horas -->
-            <article id="resultados_horas_extras"> <!-- r1 => resultados_horas_extras -->
+            <article class="resultados_horas_extras"> <!-- r1 => resultados_horas_extras -->
               <p><strong>Valores por hora</strong></p><br>
                 <table>
                     <tr>
@@ -92,7 +90,7 @@
                         <td>Valor total da hora extra domingo e feriado</td><td id="total_hora_feriado"></td> <!-- r02 => total_hora_feriado -->
                     </tr>
                     <tr>
-                        <td>Valor total da hora extra noturna</td><td id="r03"></td> <!-- r03 => total_hora_noturna -->
+                        <td>Valor total da hora extra noturna</td><td id="total_hora_noturna"></td> <!-- r03 => total_hora_noturna -->
                     </tr>
                     <tr>
                         <td><strong>Valor total do salário bruto</strong></td><td id="total_salario_bruto"></td> <!-- r04 => total_salario_bruto -->

@@ -17,35 +17,36 @@ function calcular_horas(){
     var total_hora_feriado = document.getElementById('total_hora_feriado')
     var total_hora_noturna = document.getElementById('total_hora_noturna')
     var total_salario_bruto = document.getElementById('total_salario_bruto')
-    var vh = n1 / n2
-    var ve = vh / 2 + vh
-    var vf = vh * 2
-    var vn = vh / 100 * 80 + vh
-    var vte = ve * n3
-    var vtf = vf * n4
-    var vtn = vn * n5
+    var calculo_valor_horas = n1 / n2
+    var calculo_valor_horas_extras = calculo_valor_horas / 2 + calculo_valor_horas
+    var calculo_valor_horas_feriados = calculo_valor_horas * 2
+    var calculo_valor_hora_noturna = calculo_valor_horas / 100 * 80 + calculo_valor_horas
+    var vte = calculo_valor_horas_extras * n3
+    var vtf = calculo_valor_horas_feriados * n4
+    var vtn = calculo_valor_hora_noturna * n5
     var vts = n1 + vte + vtf + vtn
-    var r1 = vh.toFixed(2)
-    var r2 = ve.toFixed(2)
-    var r3 = vf.toFixed(2)
-    var r4 = vn.toFixed(2)
+    var r1 = calculo_valor_horas.toFixed(2)
+    var r2 = calculo_valor_horas_extras.toFixed(2)
+    var r3 = calculo_valor_horas_feriados.toFixed(2)
+    var r4 = calculo_valor_hora_noturna.toFixed(2)
     var vte1 = vte.toFixed(2)
     var vtf2 = vtf.toFixed(2)
     var vtn3 = vtn.toFixed(2)
     var vts4 = vts.toFixed(2)
-    var art = document.getElementById('resultados_horas_extras')
-    var posicao = document.getElementsById('referencias')
-    t1.innerHTML = `R$ ${r1}`
-    t2.innerHTML = `R$ ${r2}`
-    t3.innerHTML = `R$ ${r3}`
-    t4.innerHTML = `R$ ${r4}`
-    r01.innerHTML = `R$ ${vte1}`
-    r02.innerHTML = `R$ ${vtf2}`
-    r03.innerHTML = `R$ ${vtn3}`
-    r04.innerHTML = `<strong>R$ ${vts4}</strong>`
-    art.style.display = 'block'
-    posicao.style.top = '950px'
+    var artigo = document.getElementsByClassName('resultados_horas_extras')[0]
+    var referencias1 = document.getElementById('referencias')
+    valor_horas.innerHTML = `R$ ${r1}`
+    valor_horas_extras.innerHTML = `R$ ${r2}`
+    valor_horas_feriados.innerHTML = `R$ ${r3}`
+    valor_hora_noturna.innerHTML = `R$ ${r4}`
+    total_hora_extra.innerHTML = `R$ ${vte1}`
+    total_hora_feriado.innerHTML = `R$ ${vtf2}`
+    total_hora_noturna.innerHTML = `R$ ${vtn3}`
+    total_salario_bruto.innerHTML = `<strong>R$ ${vts4}</strong>`
+    artigo.style.display = 'block'
+    referencias1.style.top = '950px'
 }
+
 function calcular_liquido(){
     var sal = document.getElementById('campo_salario_bruto')
     var desc = document.getElementById('campo_descontos')
@@ -99,7 +100,6 @@ function calcular_liquido(){
     var ir3 = '22,5%'
     var ir4 = '27,5%'
     var art2 = document.getElementById('resultados_salario_liquido')
-    var posicao = document.getElementsByClassName('referencias')[0]
     var total_salario_liquido = document.getElementById('valor_salario_liquido')
         // DESCONTOS INSS
     if (valor_salario <= 1100){
@@ -109,7 +109,6 @@ function calcular_liquido(){
         irrf1.innerHTML = '<strong>ISENTO</strong>'
         irrf2.innerHTML = '<strong>ISENTO</strong>'
         art2.style.display = 'block'
-        posicao.style.top = '1150px'
         // DESCONTOS INSS
     } else if (valor_salario > 1100 && valor_salario <= 1903.98){
         inss1.innerText = `${in2}`
