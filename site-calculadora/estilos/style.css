@@ -4,6 +4,7 @@ body{
 }
 .header{
     position: absolute;
+    right: 0px;
 }
 h1{
     font-size: 100px;
@@ -13,6 +14,7 @@ h1{
     font-family: fantasy;
     background-color: white;
     height: 120px;
+    width: 1341px;
     margin-top: 0px;
     line-height: 120px;
     letter-spacing: 8px;
@@ -263,12 +265,15 @@ div > strong{
     border-color: black;
 }
 #referencias{
+    display: inline-block;
     background-color: white;
     padding: 15px 0px 0px 50px;
     position: relative;
     margin: 15px;
     border-radius: 10px;
     top: 300px;
+    width: 1000px;
+    height: 600px;
 }
 #resultados_salario_liquido{
     top: 650px;
@@ -332,112 +337,92 @@ td{
     border-color: black;
 }
 .info1{
-    position: relative;
     height: 130px;
     width: 250px;
     background-color: rgb(70, 70, 255);
     color: white;
-    border-radius: 0px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
     font-size: 15px;
     display: none;
     padding: 10px;
     text-align: center;
-    float: right;
-    right: 870px;
-    bottom: 30px;
 }
 .info2{
-    position: relative;
     height: 140px;
     width: 600px;
     background-color: rgb(70, 70, 255);
     color: white;
-    border-radius: 0px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
     font-size: 15px;
     display: none;
     padding: 10px;
     text-align: center;
-    float: right;
-    right: 400px;
-    bottom: 30px;
 }
 .info3{
-    position: relative;
     height: 100px;
     width: 450px;
     background-color: rgb(70, 70, 255);
     color: white;
-    border-radius: 0px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
     font-size: 15px;
     display: none;
     padding: 10px;
     text-align: center;
-    float: right;
-    right: 588px;
-    bottom: 28px;
 }
 .info4{
-    position: relative;
     height: 180px;
     width: 350px;
     background-color: rgb(70, 70, 255);
     color: white;
-    border-radius: 0px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
     font-size: 15px;
     display: none;
     padding: 10px;
     text-align: center;
-    float: right;
-    right: 600px;
-    bottom: 220px;
 }
 .info5{
-    position: relative;
     height: 150px;
     width: 250px;
     background-color: rgb(70, 70, 255);
     color: white;
-    border-radius: 0px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
     font-size: 15px;
     display: none;
     padding: 10px;
     text-align: center;
-    float: right;
-    right: 693px;
-    bottom: 190px;
 }
 .info6{
-    position: relative;
-    height: 180px;
-    width: 370px;
+    height: 230px;
+    width: 450px;
     background-color: rgb(70, 70, 255);
     color: white;
-    border-radius: 0px 15px 15px 15px;
-    font-size: 15px;
+    border-radius: 15px 15px 15px 15px;
+    font-size: 16px;
     display: none;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
-    float: right;
-    right: 448px;
-    bottom: 220px;
+}
+.info6 strong{
+    font-size: 16px;
+    color: white;
 }
 .referencia1{
-    width: 130px;
+    width: 147px;
 }
 .referencia2{
-    width: 248px;
+    width: 272px;
 }
 .referencia3{
-    width: 210px;
+    width: 226px;
 }
 .referencia4{
-    width: 300px;
+    width: 315px;
 }
 .referencia5{
-    width: 305px;
+    width: 321px;
 }
 .referencia6{
-    width: 430px;
+    width: 446px;
 }
 .referencia1:hover + .info1{
     display: block;
@@ -453,145 +438,18 @@ td{
 }
 .referencia5:hover + .info5{
     display: block;
-
-}.referencia6:hover + .info6{
+}
+.referencia6:hover + .info6{
     display: block;
+}
+#referencias a:hover{
+    color: white;
+    background-color: rgb(155, 155, 155);
 }
 #referencias a{
     text-decoration: none;
     color: blue;
     display: block;
-    padding-bottom: 15px;
-}
-/*@media screen and (max-width: 500px) {
-    .header{
-        position: relative;
-        display: none;
-    }
-    h1{
-        margin-bottom: 0px;
-        height: 60px;
-        font-size: 20px;
-        line-height: 60px;
-        top: 0px;
-    }
-    main{
-        top: 0px;
-    }
-    .prin01{
-        float: none;
-    }
-    .st01{
-        display: inline-block;
-        width: 95px;
-    }
-    .st02{
-        display: inline-block;
-        width: 90px;
-    }
-    body{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    .prin01 > h2{
-        display: inline-block;
-        width: 320px;
-    }
-    .calculadora_horas_extras > h2{
-        display: inline-block;
-        width: 300px;
-    }
-    div > h2{
-        width: 400px;
-        font-size: 20px;
-        margin-left: 80px;
-        margin-top: 50px;
-    }
-    span + input{
-        background-color: rgba(173, 216, 230, 0.377);
-        border-radius: 5px;
-        height: 25px;
-        width: 300px;
-        margin-left: 80px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 10px;
-        border-width: 0px;
-    }
-    .calculadora_horas_extras{
-        top: 0px;
-        width: 400px;
-    }
-    .st01 + span{
-        right: 260px;
-        height: 115px;
-        top: 10px;
-    }
-    .st02 + span{
-        right: 257px;
-        height: 115px;
-    }
-    .salario_bruto_horas_info + span{
-        right: 273px;
-        height: 115px;
-    }
-    .quantidade_horas_info + span{
-        right: 189px;
-        height: 80px;
-        width: 100px;
-    }
-    .horas_extras_info + span{
-        right: 220px;
-    }
-    .horas_feriados_info + span{
-        right: 211px;
-        height: 96px;
-        width: 130px;
-    }
-    .horas_extras_noturnas_info + span{
-        right: 215px;
-        height: 50px;
-    }
-    article{
-        width: 420px;
-    }
-    .referencias{
-        top: 300px;
-        width: 360px;
-    }
-    .info01{
-        float: none;
-        left: 0px;
-        bottom: 10px;
-        height: 110px;
-    }
-    .info02{
-        float: none;
-        left: 0px;
-        bottom: 10px;
-        width: 380px;
-    }
-    .info03{
-        float: none;
-        left: 0px;
-        bottom: 12px;
-        width: 380px;
-        height: 90px;
-    }
-    .info04{
-        float: none;
-        left: 0px;
-        bottom: 10px;
-        height: 143px;
-    }
-    .info05{
-        float: none;
-        left: 0px;
-        bottom: 10px;
-        height: 108px;
-    }
-    .info06{
-        float: none;
-        left: 0px;
-        bottom: 10px;
-        height: 160px;
-    }
+    padding: 10px;
+    border-radius: 10px;
 }
