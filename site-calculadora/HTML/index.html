@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular Salário</title>
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="shortcut icon" href="../IMAGENS/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <img class="header" src="imagens/Cálculo-Encargos-Trabalhistas.jpg" alt="Imagem de capa - 'Cálculos'">
+        <img class="header" src="../IMAGENS/Cálculo-Encargos-Trabalhistas.jpg" alt="Imagem de capa - 'Cálculos'">
         <h1>CALCULADORA ONLINE</h1>
         <nav>
             <li>Calcular Décimo Terceiro</li>
@@ -21,23 +21,33 @@
             <li>Calcular Horas Extras</li>
             <li>Calcular Salário Líquido</li>
         </nav>
+        <nav class="nav2"></nav>
+        <code>
+            <li onmouseenter="menu1()">Calcular Décimo Terceiro</li>
+            <li onmouseenter="menu2()">Calcular Recisão CLT</li>
+            <li onmouseenter="menu3()">Calcular FGTS</li>
+            <li onmouseenter="menu4()">Calcular Férias</li>
+            <li onmouseenter="menu5()">Simular Seguro-desemprego</li>
+            <li onmouseenter="menu6()">Calcular Horas Extras</li>
+            <li onmouseenter="menu7()">Calcular Salário Líquido</li>
+        </code>
     </header>
     <main id="main">
         <div class="calculadora_horas_extras"> <!-- prin02 => calculadora_horas_extras -->
             <h2>CALCULADORA DE HORAS EXTRAS</h2>
-            <div class="salario_bruto_horas_info">Salário bruto<strong onclick="informar1()"> ⓘ</strong></div> <!-- st001 => salario_bruto_horas_info -->
+            <div class="salario_bruto_horas_info">Salário bruto<strong onclick="informar1()" onmouseenter="move_info1()" onmouseout="sair_info1()"> ⓘ</strong></div> <!-- st001 => salario_bruto_horas_info -->
             <span onclick="retirar_info1()">Salário registrado na carteira de trabalho, remuneração que um trabalhador recebe por mês, sem considerar os descontos oficiais obrigatórios.</span>
             <input type="number" name="" id="campo_salario_bruto_horas"> <!-- sb => campo_salario_bruto_horas -->
-            <div class="quantidade_horas_info">Quantidade de horas trabalhadas no mês<strong onclick="informar2()"> ⓘ</strong></div> <!-- st002 => quantidade_horas_info -->
+            <div class="quantidade_horas_info">Quantidade de horas trabalhadas no mês<strong onclick="informar2()" onmouseenter="move_info2()" onmouseout="sair_info2()"> ⓘ</strong></div> <!-- st002 => quantidade_horas_info -->
             <span onclick="retirar_info2()">Quantidade de horas trabalhadas no mês.</span>
             <input type="number" name="" id="campo_quantidade_horas"> <!-- qh => campo_quantidade_horas -->
-            <div class="horas_extras_info">Horas extras normais<strong onclick="informar3()"> ⓘ</strong></div> <!-- st003 => horas_extras_info -->
+            <div class="horas_extras_info">Horas extras normais<strong onclick="informar3()" onmouseenter="move_info3()" onmouseout="sair_info3()"> ⓘ</strong></div> <!-- st003 => horas_extras_info -->
             <span onclick="retirar_info3()">Quantidade de horas extras trabalhadas de segunda a sábado.</span>
             <input type="number" name="" id="campo_horas_extras"> <!-- he => campo_horas_extras -->
-            <div class="horas_feriados_info">Horas extras domingos e feriados<strong onclick="informar4()"> ⓘ</strong></div> <!-- st004 => horas_feriados_info -->
+            <div class="horas_feriados_info">Horas extras domingos e feriados<strong onclick="informar4()" onmouseenter="move_info4()" onmouseout="sair_info4()"> ⓘ</strong></div> <!-- st004 => horas_feriados_info -->
             <span onclick="retirar_info4()">Quantidadede horas extras trabalhadas no domingo e/ou feriado.</span>
             <input type="number" name="" id="campo_horas_feriados"> <!-- hf => campo_horas_feriados -->
-            <div class="horas_extras_noturnas_info">Horas extras noturnas<strong onclick="informar5()"> ⓘ</strong></div> <!-- st005 => horas_extras_noturnas_info -->
+            <div class="horas_extras_noturnas_info">Horas extras noturnas<strong onclick="informar5()" onmouseenter="move_info5()" onmouseout="sair_info5()"> ⓘ</strong></div> <!-- st005 => horas_extras_noturnas_info -->
             <span onclick="retirar_info5()">Quantidade de horas extras trabalhadas entre 22h e 5h.</span>
             <input type="number" name="" id="campo_horas_extras_noturnas"> <br> <br> <!-- hn => campo_horas_extras_noturnas -->
             <input id="calcular_horas" type="button" value="Calcular" onclick="calcular_horas()"> <!-- cal => calcular_horas -->
@@ -82,10 +92,10 @@
         </div>
         <div class="calculadora_salario_liquido"> <!--Primeira div, responsável pelo cálculo do salário líquido-->
             <h2>CALCULADORA DE SALÁRIO LÍQUIDO</h2>
-            <div class="salario_bruto_info">Salário bruto<strong onclick="informar6()"> ⓘ</strong></div><!-- st01 => salario_bruto_info -->
+            <div class="salario_bruto_info">Salário bruto<strong onclick="informar6()" onmouseenter="move_info6()" onmouseout="sair_info6()"> ⓘ</strong></div><!-- st01 => salario_bruto_info -->
             <span onclick="retirar_info6()">Salário registrado na carteira de trabalho, remuneração que um trabalhador recebe por mês, sem considerar os descontos oficiais obrigatórios.</span>
             <input type="number" name="salario" id="campo_salario_bruto"> <br> <!-- salario => campo_salario_bruto -->
-            <div class="descontos_info">Descontos<strong onclick="informar7()"> ⓘ</strong></div> <!-- st02 => descontos_info -->
+            <div class="descontos_info">Descontos<strong onclick="informar7()" onmouseenter="move_info7()" onmouseout="sair_info7()"> ⓘ</strong></div> <!-- st02 => descontos_info -->
             <span onclick="retirar_info7()">Descontos não oficiais e obrigatórios. Descontos alternativos acordados com a sua empresa ou determinação jurídica específica como pensão alimentícia.</span>
             <input type="number" name="descontos" id="campo_descontos"> <br> <!-- descontos => campo_descontos -->
             <input id="calcular_liquido" type="button" value="Calcular" onclick="calcular_liquido()"> <!-- cal2 => calcular_liquido -->
@@ -123,6 +133,6 @@
             <div class="info6" onclick="retirar_ref6()">Por fim, é importante conhecer a quantidade de horas extras realizadas aos domingos e feriados também. Isso porque a porcentagem adicional é maior do que as demais, e faz diferença na hora de calcular os seus recebimentos. Todas essas informações devem estar disponíveis para o funcionário no departamento responsável da empresa. Assim, com esses dados, a calculadora de horas extras poderá informar a previsão da remuneração a que você tem direito.</div> <!-- info06 => info6 -->
         </div>
     </main>
-    <script src="script.js"></script>
+    <script src="../JS/script.js"></script>
 </body>
 </html>

@@ -173,6 +173,9 @@ function calcular_liquido(){
         referencias1.style.top = '900px'
     }
 }
+///////////////                             ///////////////////
+///////////////            MOBILE           ///////////////////
+///////////////                             ///////////////////
 
 function informar1(){
     var informacao1 = document.getElementsByTagName('span')[0]
@@ -231,108 +234,59 @@ function retirar_info7(){
     var informacao7 = document.getElementsByTagName('span')[6]
     informacao7.style.display = 'none'
 }
-///////////////////////////////////////////////////////////////
-/*
+
+///////////////                             ///////////////////
+///////////////         REFERÊNCIAS         ///////////////////
+///////////////                             ///////////////////
+
 function referencia1(){
-    var info1 = document.getElementsByClassName('info1')[0]
-    info1.style.display = 'block'
+    var referencia1 = document.getElementsByClassName('info1')[0]
+    referencia1.style.display = 'block'
 }
 function referencia2(){
-    var info2 = document.getElementsByClassName('info2')[0]
-    info2.style.display = 'block'
+    var referencia2 = document.getElementsByClassName('info2')[0]
+    referencia2.style.display = 'block'
 }
 function referencia3(){
-    var info3 = document.getElementsByClassName('info3')[0]
-    info3.style.display = 'block'
+    var referencia3 = document.getElementsByClassName('info3')[0]
+    referencia3.style.display = 'block'
 }
 function referencia4(){
-    var info4 = document.getElementsByClassName('info4')[0]
-    info4.style.display = 'block'
+    var referencia4 = document.getElementsByClassName('info4')[0]
+    referencia4.style.display = 'block'
 }
 function referencia5(){
-    var info5 = document.getElementsByClassName('info5')[0]
-    info5.style.display = 'block'
+    var referencia5 = document.getElementsByClassName('info5')[0]
+    referencia5.style.display = 'block'
 }
 function referencia6(){
-    var info6 = document.getElementsByClassName('info6')[0]
-    info6.style.display = 'block'
-}*/
-/////////////////////////////////////////////////////////////
+    var referencia6 = document.getElementsByClassName('info6')[0]
+    referencia6.style.display = 'block'
+}
+
+///////////////////////////////////////////////////////////
+
 function retirar_ref1(){
-    var info1 = document.getElementsByClassName('info1')[0]
-    info1.style.display = 'none'
+    var retirar_ref1 = document.getElementsByClassName('info1')[0]
+    retirar_ref1.style.display = 'none'
 }
 function retirar_ref2(){
-    var info2 = document.getElementsByClassName('info2')[0]
-    info2.style.display = 'none'
+    var retirar_ref2 = document.getElementsByClassName('info2')[0]
+    retirar_ref2.style.display = 'none'
 }
 function retirar_ref3(){
-    var info3 = document.getElementsByClassName('info3')[0]
-    info3.style.display = 'none'
+    var retirar_ref3 = document.getElementsByClassName('info3')[0]
+    retirar_ref3.style.display = 'none'
 }
 function retirar_ref4(){
-    var info4 = document.getElementsByClassName('info4')[0]
-    info4.style.display = 'none'
+    var retirar_ref4 = document.getElementsByClassName('info4')[0]
+    retirar_ref4.style.display = 'none'
 }
 function retirar_ref5(){
-    var info5 = document.getElementsByClassName('info5')[0]
-    info5.style.display = 'none'
+    var retirar_ref5 = document.getElementsByClassName('info5')[0]
+    retirar_ref5.style.display = 'none'
 }
 function retirar_ref6(){
-    var info6 = document.getElementsByClassName('info6')[0]
-    info6.style.display = 'none'
-}
-
-///////////////////////////////////////////////////////////
-
-function mover1(){
-    var info1 = document.getElementsByClassName('info1')[0]
-    info1.style.display = 'block'
-}
-function mover2(){
-    var info2 = document.getElementsByClassName('info2')[0]
-    info2.style.display = 'block'
-}
-function mover3(){
-    var info3 = document.getElementsByClassName('info3')[0]
-    info3.style.display = 'block'
-}
-function mover4(){
-    var info4 = document.getElementsByClassName('info4')[0]
-    info4.style.display = 'block'
-}
-function mover5(){
-    var info5 = document.getElementsByClassName('info5')[0]
-    info5.style.display = 'block'
-}
-function mover6(){
-    var info6 = document.getElementsByClassName('info6')[0]
-    info6.style.display = 'block'
-}
-
-///////////////////////////////////////////////////////////
-
-function sair1(){
-    var info1 = document.getElementsByClassName('info1')[0]
-    info1.style.display = 'none'
-}
-function sair2(){
-    var info2 = document.getElementsByClassName('info2')[0]
-    info2.style.display = 'none'
-}
-function sair3(){
-    var info3 = document.getElementsByClassName('info3')[0]
-    info3.style.display = 'none'
-}
-function sair4(){
-    var info4 = document.getElementsByClassName('info4')[0]
-    info4.style.display = 'none'
-}
-function sair5(){
-    var info5 = document.getElementsByClassName('info5')[0]
-    info5.style.display = 'none'
-}
-function sair6(){
-    var info6 = document.getElementsByClassName('info6')[0]
-    info6.style.display = 'none'
+    var retirar_ref6 = document.getElementsByClassName('info6')[0]
+    retirar_ref6.style.display = 'none'
 }

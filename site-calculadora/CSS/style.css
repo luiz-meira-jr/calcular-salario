@@ -10,10 +10,16 @@ body{
 }
 nav{
     margin-top: 175px;
-    top: 200px;
     height: 50px;
     background-color: rgb(40, 40, 255);
     color: white;
+}
+.nav2{
+    margin-top: 0px;
+    height: 50px;
+    background-color: rgb(40, 40, 255);
+    color: white;
+    width: 483px;
 }
 li{
     background-color: rgb(40, 40, 255);
@@ -58,9 +64,6 @@ div > strong{
     font-size: 15px;
     font-weight: 500;
 }
-.salario_bruto_info:hover+span{
-    display: block;
-}
 .salario_bruto_info{
     width: 130px;
 }
@@ -77,9 +80,6 @@ div > strong{
     bottom: 18px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
-}
-.descontos_info:hover+span{
-    display: block;
 }
 .descontos_info{
     width: 103px;
@@ -115,9 +115,6 @@ div > strong{
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.salario_bruto_horas_info:hover+span{
-    display: block;
-}
 .quantidade_horas_info{
     width: 356px;
 }
@@ -134,9 +131,6 @@ div > strong{
     bottom: 20px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
-}
-.quantidade_horas_info:hover+span{
-    display: block;
 }
 .horas_extras_info{
     width: 195px;
@@ -155,9 +149,6 @@ div > strong{
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.horas_extras_info:hover+span{
-    display: block;
-}
 .horas_feriados_info{
     width: 292px;
 }
@@ -175,9 +166,6 @@ div > strong{
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.horas_feriados_info:hover+span{
-    display: block;
-}
 .horas_extras_noturnas_info{
     width: 202px;
 }
@@ -194,9 +182,6 @@ div > strong{
     bottom: 20px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
-}
-.horas_extras_noturnas_info:hover+span{
-    display: block;
 }
 .calculadora_salario_liquido > h2{
     font-size: 20px;
@@ -447,6 +432,34 @@ td{
     color: white;
     background-color: rgb(155, 155, 155);
 }
+.salario_bruto_info strong:hover{
+    color: blue;
+    font-weight: 600;
+}
+.descontos_info strong:hover{
+    color: blue;
+    font-weight: 600;
+}
+.salario_bruto_horas_info strong:hover{
+    color: blue;
+    font-weight: 600;
+}
+.quantidade_horas_info strong:hover{
+    color: blue;
+    font-weight: 600;
+}
+.horas_extras_info strong:hover{
+    color: blue;
+    font-weight: 600;
+}
+.horas_feriados_info strong:hover{
+    color: blue;
+    font-weight: 600;
+}
+.horas_extras_noturnas_info strong:hover{
+    color: blue;
+    font-weight: 600;
+}
 /*
 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
@@ -470,6 +483,22 @@ td{
         margin: 0px;
         height: 70px;
         line-height: 70px;
+    }
+    nav{
+        display: none;
+    }
+    .nav2{
+        display: block;
+    }
+    code{
+        display: block;
+    }
+    header{
+        position: absolute;
+    }
+    li{
+        display: block;
+        width: 200px;
     }
     #main{
         top: 50px;
@@ -651,9 +680,10 @@ td{
         width: 420px;
         height: 570px;
         margin: 0px;
-        padding: 0px;
-        top: 0px;
+        padding: 10px 0px 0px 0px;
+        top: 70px;
         float: none;
+        z-index: -1;
     }
     .calculadora_horas_extras > h2{
         font-size: 20px;
