@@ -108,7 +108,7 @@ function calcular_liquido(){
         irrf1.innerHTML = '<strong>ISENTO</strong>'
         irrf2.innerHTML = '<strong>ISENTO</strong>'
         art2.style.display = 'block'    
-        referencias1.style.top = '900px'
+        referencias1.style.top = '1000px'
         // DESCONTOS INSS
     } else if (valor_salario > 1100 && valor_salario <= 1903.98){
         inss1.innerText = `${in2}`
@@ -117,7 +117,7 @@ function calcular_liquido(){
         irrf2.innerHTML = '<strong>ISENTO</strong>'
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_c_desconto2}</strong>`
         art2.style.display = 'block'    
-        referencias1.style.top = '900px'
+        referencias1.style.top = '1000px'
         // DESCONTOS IRRF    
     } else if (valor_salario > 1903.98 && valor_salario <= 2203.48){
         inss1.innerText = `${in2}`
@@ -126,7 +126,7 @@ function calcular_liquido(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf1}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_9_7_5}</strong>`
         art2.style.display = 'block'    
-        referencias1.style.top = '900px'
+        referencias1.style.top = '1000px'
         // DESCONTOS INSS
     } else if (valor_salario > 2203.48 && valor_salario <= 2826.65){
         inss1.innerText = `${in3}`
@@ -135,7 +135,7 @@ function calcular_liquido(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf1}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_12_7_5}</strong>`
         art2.style.display = 'block'    
-        referencias1.style.top = '900px'
+        referencias1.style.top = '1000px'
     } else if (valor_salario > 2826.65 && valor_salario <= 3305.23){
         inss1.innerText = `${in3}`
         inss2.innerText = `R$ ${total_desconto_12}`
@@ -143,7 +143,7 @@ function calcular_liquido(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf2}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_12_15}</strong>`
         art2.style.display = 'block'    
-        referencias1.style.top = '900px'
+        referencias1.style.top = '1000px'
         // DESCONTOS IRRF
     } else if (valor_salario > 3305.23 && valor_salario <= 3751.05){
         inss1.innerText = `${in4}`
@@ -152,7 +152,7 @@ function calcular_liquido(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf2}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_14_15}</strong>`
         art2.style.display = 'block'    
-        referencias1.style.top = '900px'
+        referencias1.style.top = '1000px'
         // DESCONTOS INSS
     } else if (valor_salario > 3751.05 && valor_salario < 4664.68){
         inss1.innerText = `${in4}`
@@ -161,7 +161,7 @@ function calcular_liquido(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf3}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_14_22_5}</strong>`
         art2.style.display = 'block'    
-        referencias1.style.top = '900px'
+        referencias1.style.top = '1000px'
         // DESCONTOS IRRF
     } else if (valor_salario <= 4664.68 && valor_salario <= 6433.57){
         inss1.innerText = `${in4}`
@@ -170,7 +170,7 @@ function calcular_liquido(){
         irrf2.innerHTML = `R$ ${total_desconto_irrf4}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_14_27_5}</strong>`
         art2.style.display = 'block'    
-        referencias1.style.top = '900px'
+        referencias1.style.top = '1000px'
     }
 }
 ///////////////                             ///////////////////
@@ -289,4 +289,32 @@ function retirar_ref5(){
 function retirar_ref6(){
     var retirar_ref6 = document.getElementsByClassName('info6')[0]
     retirar_ref6.style.display = 'none'
+}
+///////////////                             ///////////////////
+///////////////             MENU            ///////////////////
+///////////////                             ///////////////////
+
+function abrir(){
+    var abrir = document.getElementsByTagName('code')[0]
+    var header = document.getElementsByTagName('header')[0]
+    var main = document.getElementById('main')
+    var menu = document.getElementsByClassName('menu')[0]
+    var voltar = document.getElementsByClassName('voltar')[0]
+    header.style.position = 'fixed'
+    main.style.zIndex = '-1'
+    abrir.style.display = 'block'
+    menu.style.display = 'none'
+    voltar.style.display = 'block'
+}
+function fechar(){
+    var voltar = document.getElementsByClassName('voltar')[0]
+    var header = document.getElementsByTagName('header')[0]
+    var main = document.getElementById('main')
+    var menu = document.getElementsByClassName('menu')[0]
+    var fechar = document.getElementsByTagName('code')[0]
+    header.style.position = 'static'
+    main.style.zIndex = '1'
+    voltar.style.display = 'none'
+    menu.style.display = 'block'
+    fechar.style.display = 'none'
 }
