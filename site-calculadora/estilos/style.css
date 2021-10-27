@@ -19,16 +19,9 @@ h1{
     letter-spacing: 8px;
     top: 90px;
 }
-main{
+#main{
     position: relative;
     top: 250px;
-}
-.first{
-    position: relative;
-    margin-left: 40px;
-    top: 270px;
-    font-size: 20px;
-    color: rgb(56, 56, 56);
 }
 .calculadora_salario_liquido{
     background-color: white;
@@ -37,17 +30,17 @@ main{
     padding: 5px 20px 20px 20px;
     margin-left: 5px;
     margin-right: 5px;
-    float: right;
 }
 div > strong{
-    color: rgb(45, 45, 255);
+    color: black;
     font-size: 15px;
+    font-weight: 500;
 }
 .salario_bruto_info:hover+span{
     display: block;
 }
 .salario_bruto_info{
-    width: 115px;
+    width: 130px;
 }
 .salario_bruto_info+span{
     position: relative;
@@ -58,8 +51,8 @@ div > strong{
     height: 140px;
     width: 200px;
     float: right;
-    right: 238px;
-    bottom: 20px;
+    right: 226px;
+    bottom: 18px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
@@ -67,7 +60,7 @@ div > strong{
     display: block;
 }
 .descontos_info{
-    width: 93px;
+    width: 103px;
 }
 .descontos_info + span{
     position: relative;
@@ -78,13 +71,13 @@ div > strong{
     height: 140px;
     width: 220px;
     float: right;
-    right: 240px;
-    bottom: 20px;
+    right: 227px;
+    bottom: 18px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
 .salario_bruto_horas_info{
-    width: 115px;
+    width: 126px;
 }
 .salario_bruto_horas_info + span{
     position: relative;
@@ -95,8 +88,8 @@ div > strong{
     height: 130px;
     width: 200px;
     float: right;
-    right: 252px;
-    bottom: 22px;
+    right: 239px;
+    bottom: 20px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
@@ -104,7 +97,7 @@ div > strong{
     display: block;
 }
 .quantidade_horas_info{
-    width: 344px;
+    width: 356px;
 }
 .quantidade_horas_info + span{
     position: relative;
@@ -115,8 +108,8 @@ div > strong{
     height: 40px;
     width: 170px;
     float: right;
-    right: 54px;
-    bottom: 22px;
+    right: 41px;
+    bottom: 20px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
@@ -124,7 +117,7 @@ div > strong{
     display: block;
 }
 .horas_extras_info{
-    width: 185px;
+    width: 195px;
 }
 .horas_extras_info + span{
     position: relative;
@@ -135,8 +128,8 @@ div > strong{
     height: 60px;
     width: 200px;
     float: right;
-    right: 184px;
-    bottom: 22px;
+    right: 171px;
+    bottom: 20px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
@@ -144,7 +137,7 @@ div > strong{
     display: block;
 }
 .horas_feriados_info{
-    width: 282px;
+    width: 292px;
 }
 .horas_feriados_info + span{
     position: relative;
@@ -155,8 +148,8 @@ div > strong{
     height: 60px;
     width: 200px;
     float: right;
-    right: 86px;
-    bottom: 22px;
+    right: 73px;
+    bottom: 20px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
@@ -164,19 +157,19 @@ div > strong{
     display: block;
 }
 .horas_extras_noturnas_info{
-    width: 192px;
+    width: 202px;
 }
 .horas_extras_noturnas_info + span{
     position: relative;
-    display: block;
+    display: none;
     background-color: rgb(70, 70, 255);
     color: white;
     padding: 8px;
     height: 60px;
     width: 200px;
     float: right;
-    right: 178px;
-    bottom: 22px;
+    right: 164px;
+    bottom: 20px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
@@ -210,7 +203,7 @@ div > strong{
     height: 280px;
     position: relative;
     padding: 5px 20px 20px 20px;
-    margin-left: 5px;
+    float: right;
 }
 .calculadora_horas_extras > h2{
     font-size: 20px;
@@ -255,7 +248,7 @@ div > strong{
     margin: 15px;
     border-radius: 10px;
     top: 300px;
-    width: 1000px;
+    width: 440px;
     height: 600px;
 }
 #resultados_salario_liquido{
@@ -299,22 +292,6 @@ td{
 }
 #calcular_liquido:hover{
     background-color: rgb(0, 0, 140);
-}
-#limpar_salario_liquido{
-    width: 120px;
-    height: 50px;
-    background-color: white;
-    color: black;
-    border-radius: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    top: 300px;
-    margin-left: 50px;
-}
-#limpar_salario_liquido:hover{
-    border-width: 1px;
-    border-color: black;
 }
 .info1{
     height: 130px;
@@ -372,7 +349,7 @@ td{
     text-align: center;
 }
 .info6{
-    height: 230px;
+    height: 180px;
     width: 450px;
     background-color: rgb(70, 70, 255);
     color: white;
@@ -382,63 +359,491 @@ td{
     padding: 15px;
     text-align: center;
 }
-.info6 strong{
-    font-size: 16px;
-    color: white;
-}
 .referencia1{
-    width: 147px;
-}
-.referencia2{
-    width: 272px;
-}
-.referencia3{
-    width: 226px;
-}
-.referencia4{
-    width: 315px;
-}
-.referencia5{
-    width: 321px;
-}
-.referencia6{
-    width: 446px;
-}
-.referencia1:hover + .info1{
-    display: block;
-}
-.referencia2:hover + .info2{
-    display: block;
-}
-.referencia3:hover + .info3{
-    display: block;
-}
-.referencia4:hover + .info4{
-    display: block;
-}
-.referencia5:hover + .info5{
-    display: block;
-}
-.referencia6:hover + .info6{
-    display: block;
-}
-#referencias a:hover{
-    color: white;
-    background-color: rgb(155, 155, 155);
-}
-#referencias a{
-    text-decoration: none;
+    width: 150px;
     color: blue;
-    display: block;
+    display: inline-block;
     padding: 10px;
     border-radius: 10px;
 }
+.referencia2{
+    width: 277px;
+    color: blue;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+}
+.referencia3{
+    width: 227px;
+    color: blue;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+}
+.referencia4{
+    width: 315px;
+    color: blue;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+}
+.referencia5{
+    width: 322px;
+    color: blue;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+}
+.referencia6{
+    width: 446px;
+    color: blue;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+}
+.referencia1:hover{
+    color: white;
+    background-color: rgb(155, 155, 155);
+}
+.referencia2:hover{
+    color: white;
+    background-color: rgb(155, 155, 155);
+}
+.referencia3:hover{
+    color: white;
+    background-color: rgb(155, 155, 155);
+}
+.referencia4:hover{
+    color: white;
+    background-color: rgb(155, 155, 155);
+}
+.referencia5:hover{
+    color: white;
+    background-color: rgb(155, 155, 155);
+}
+.referencia6:hover{
+    color: white;
+    background-color: rgb(155, 155, 155);
+}
 /*
-000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
-000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
-000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*/
+000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*/
 @media screen and (max-width: 516px) {
-    
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .header{
+        display: none;
+    }
+    h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 30px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        width: 100%;
+        top: 0px;
+        margin: 0px;
+        height: 70px;
+        line-height: 70px;
+    }
+    #main{
+        top: 50px;
+        width: 450px;
+    }
+    .calculadora_salario_liquido{
+        background-color: white;
+        width: 420px;
+        height: 310px;
+        padding: 0px;
+        margin: 0px;
+        position: relative;
+        top: 650px;
+    }
+    div > strong{
+        color: black;
+        font-size: 12.5px;
+        font-weight: 500;
+    }
+    .salario_bruto_info:hover + span{
+        display: none;
+    }
+    .salario_bruto_info{
+        width: 115px;
+    }
+    .salario_bruto_info + span{
+        position: absolute;
+        display: none;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        padding: 8px;
+        height: 120px;
+        width: 200px;
+        float: right;
+        left: 153px;
+        top: 52px;
+        text-align: center;
+        border-radius: 0px 15px 15px 15px;
+    }
+    .descontos_info:hover+span{
+        display: none;
+    }
+    .descontos_info{
+        width: 93px;
+    }
+    .descontos_info + span{
+        position: absolute;
+        display: none;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        padding: 8px;
+        height: 123px;
+        width: 220px;
+        float: right;
+        left: 136px;
+        top: 135px;
+        text-align: center;
+        border-radius: 0px 15px 15px 15px;
+    }
+    .salario_bruto_horas_info{
+        width: 115px;
+    }
+    .salario_bruto_horas_info + span{
+        position: absolute;
+        display: none;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        padding: 8px;
+        height: 120px;
+        width: 200px;
+        left: 153px;
+        top: 57px;
+        text-align: center;
+        border-radius: 0px 15px 15px 15px;
+    }
+    .salario_bruto_horas_info:hover+span{
+        display: none;
+    }
+    .quantidade_horas_info{
+        width: 344px;
+    }
+    .quantidade_horas_info + span{
+        position: absolute;
+        display: none;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        padding: 5px;
+        height: 40px;
+        width: 160px;
+        left: 155px;
+        top: 157px;
+        text-align: center;
+        border-radius: 15px 0px 15px 15px;
+    }
+    .quantidade_horas_info:hover+span{
+        display: none;
+    }
+    .horas_extras_info{
+        width: 185px;
+    }
+    .horas_extras_info + span{
+        position: absolute;
+        display: none;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        padding: 6px;
+        height: 60px;
+        width: 200px;
+        left: 206px;
+        top: 231px;
+        text-align: center;
+        border-radius: 0px 15px 15px 15px;
+    }
+    .horas_extras_info:hover+span{
+        display: none;
+    }
+    .horas_feriados_info{
+        width: 282px;
+    }
+    .horas_feriados_info + span{
+        position: absolute;
+        display: none;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        padding: 5px;
+        height: 60px;
+        width: 200px;
+        left: 64px;
+        top: 331px;
+        text-align: center;
+        border-radius: 15px 0px 15px 15px;
+    }
+    .horas_feriados_info:hover+span{
+        display: none;
+    }
+    .horas_extras_noturnas_info{
+        width: 192px;
+    }
+    .horas_extras_noturnas_info + span{
+        position: absolute;
+        display: none;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        padding: 5px;
+        height: 50px;
+        width: 196px;
+        left: 212px;
+        top: 405px;
+        text-align: center;
+        border-radius: 0px 15px 15px 15px;
+    }
+    .horas_extras_noturnas_info:hover+span{
+        display: none;
+    }
+    .calculadora_salario_liquido > h2{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        margin-left: 40px;
+    }
+    .calculadora_salario_liquido > div{
+        width: 350px;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 50px;
+    }
+    .calculadora_salario_liquido > input{
+        margin-left: 50px;
+        background-color: rgba(173, 216, 230, 0.377);
+        height: 50px;
+        width: 300px;
+        padding-left: 10px;
+        border-radius: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        border-width: 0px;
+    }
+    .calculadora_horas_extras{
+        background-color: white;
+        width: 420px;
+        height: 570px;
+        margin: 0px;
+        padding: 0px;
+        top: 0px;
+        float: none;
+    }
+    .calculadora_horas_extras > h2{
+        font-size: 20px;
+        margin-left: 40px;
+    }
+    .calculadora_horas_extras > div{
+        height: 35px;
+        line-height: 35px;
+        margin-left: 50px;
+    }
+    .calculadora_horas_extras > input{
+        margin-left: 50px;
+        background-color: rgba(173, 216, 230, 0.377);
+        height: 50px;
+        width: 300px;
+        border-radius: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        border-width: 0px;
+    }
+    #calcular_horas{
+        width: 160px;
+        height: 50px;
+        background-color: blue;
+        color: white;
+        border-radius: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        top: 300px;
+        margin-left: 120px;
+    }
+    #calcular_horas:hover{
+        background-color: rgb(0, 0, 140);
+    }
+    #referencias{
+        display: inline-block;
+        background-color: white;
+        padding-left: 15px;
+        position: relative;
+        border-radius: 10px;
+        top: 620px;
+        margin: 0px;
+        width: 440px;
+        height: 600px;
+    }
+    #resultados_salario_liquido{
+        top: 600px;
+        margin-top: 0px;
+        display: none;
+    }
+    .resultados_horas_extras{
+        margin-top: 0px;
+        display: none;
+    }
+    #calcular_liquido{
+        width: 160px;
+        height: 50px;
+        background-color: blue;
+        color: white;
+        border-radius: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        top: 300px;
+        margin-left: 120px;
+        margin-top: 20px;
+    }
+    .info1{
+        height: 108px;
+        width: 250px;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        border-radius: 15px 15px 15px 15px;
+        font-size: 15px;
+        display: none;
+        padding: 10px;
+        text-align: center;
+    }
+    .info2{
+        height: 165px;
+        width: 400px;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        border-radius: 15px 15px 15px 15px;
+        font-size: 15px;
+        display: none;
+        padding: 10px;
+        text-align: center;
+    }
+    .info3{
+        height: 90px;
+        width: 390px;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        border-radius: 15px 15px 15px 15px;
+        font-size: 15px;
+        display: none;
+        padding: 10px;
+        text-align: center;
+    }
+    .info4{
+        height: 150px;
+        width: 350px;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        border-radius: 15px 15px 15px 15px;
+        font-size: 15px;
+        display: none;
+        padding: 10px;
+        text-align: center;
+    }
+    .info5{
+        height: 110px;
+        width: 250px;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        border-radius: 15px 15px 15px 15px;
+        font-size: 15px;
+        display: none;
+        padding: 10px;
+        text-align: center;
+    }
+    .info6{
+        height: 210px;
+        width: 400px;
+        background-color: rgb(70, 70, 255);
+        color: white;
+        border-radius: 15px 15px 15px 15px;
+        font-size: 16px;
+        display: none;
+        padding: 15px;
+        text-align: center;
+    }
+    .referencia1{
+        width: 121px;
+        color: blue;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .referencia2{
+        width: 220px;
+        color: blue;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .referencia3{
+        width: 185px;
+        color: blue;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .referencia4{
+        width: 255px;
+        color: blue;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .referencia5{
+        width: 261px;
+        color: blue;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .referencia6{
+        width: 360px;
+        color: blue;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .referencia1:hover + .info1{
+        display: none;
+    }
+    .referencia2:hover + .info2{
+        display: none;
+    }
+    .referencia3:hover + .info3{
+        display: none;
+    }
+    .referencia4:hover + .info4{
+        display: none;
+    }
+    .referencia5:hover + .info5{
+        display: none;
+    }
+    .referencia6:hover + .info6{
+        display: none;
+    }
+    .referencia1 strong{
+        color: blue;
+    }
+    .referencia2 strong{
+        color: blue;
+    }
+    .referencia3 strong{
+        color: blue;
+    }
+    .referencia4 strong{
+        color: blue;
+    }
+    .referencia5 strong{
+        color: blue;
+    }
+    .referencia6 strong{
+        color: blue;
+    }
 }

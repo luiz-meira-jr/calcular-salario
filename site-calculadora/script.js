@@ -34,7 +34,6 @@ function calcular_horas(){
     var vtn3 = vtn.toFixed(2)
     var vts4 = vts.toFixed(2)
     var artigo = document.getElementsByClassName('resultados_horas_extras')[0]
-    var referencias1 = document.getElementById('referencias')
     valor_horas.innerHTML = `R$ ${r1}`
     valor_horas_extras.innerHTML = `R$ ${r2}`
     valor_horas_feriados.innerHTML = `R$ ${r3}`
@@ -44,7 +43,6 @@ function calcular_horas(){
     total_hora_noturna.innerHTML = `R$ ${vtn3}`
     total_salario_bruto.innerHTML = `<strong>R$ ${vts4}</strong>`
     artigo.style.display = 'block'
-    referencias1.style.top = '950px'
 }
 
 function calcular_liquido(){
@@ -101,6 +99,7 @@ function calcular_liquido(){
     var ir4 = '27,5%'
     var art2 = document.getElementById('resultados_salario_liquido')
     var total_salario_liquido = document.getElementById('valor_salario_liquido')
+    var referencias1 = document.getElementById('referencias')
         // DESCONTOS INSS
     if (valor_salario <= 1100){
         inss1.innerText = `${in1}`
@@ -108,7 +107,8 @@ function calcular_liquido(){
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_c_desconto1}</strong>`
         irrf1.innerHTML = '<strong>ISENTO</strong>'
         irrf2.innerHTML = '<strong>ISENTO</strong>'
-        art2.style.display = 'block'
+        art2.style.display = 'block'    
+        referencias1.style.top = '900px'
         // DESCONTOS INSS
     } else if (valor_salario > 1100 && valor_salario <= 1903.98){
         inss1.innerText = `${in2}`
@@ -116,7 +116,8 @@ function calcular_liquido(){
         irrf1.innerHTML = '<strong>ISENTO</strong>'
         irrf2.innerHTML = '<strong>ISENTO</strong>'
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_c_desconto2}</strong>`
-        art2.style.display = 'block'
+        art2.style.display = 'block'    
+        referencias1.style.top = '900px'
         // DESCONTOS IRRF    
     } else if (valor_salario > 1903.98 && valor_salario <= 2203.48){
         inss1.innerText = `${in2}`
@@ -124,7 +125,8 @@ function calcular_liquido(){
         irrf1.innerHTML = `${ir1}`
         irrf2.innerHTML = `R$ ${total_desconto_irrf1}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_9_7_5}</strong>`
-        art2.style.display = 'block'
+        art2.style.display = 'block'    
+        referencias1.style.top = '900px'
         // DESCONTOS INSS
     } else if (valor_salario > 2203.48 && valor_salario <= 2826.65){
         inss1.innerText = `${in3}`
@@ -132,14 +134,16 @@ function calcular_liquido(){
         irrf1.innerHTML = `${ir1}`
         irrf2.innerHTML = `R$ ${total_desconto_irrf1}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_12_7_5}</strong>`
-        art2.style.display = 'block'
+        art2.style.display = 'block'    
+        referencias1.style.top = '900px'
     } else if (valor_salario > 2826.65 && valor_salario <= 3305.23){
         inss1.innerText = `${in3}`
         inss2.innerText = `R$ ${total_desconto_12}`
         irrf1.innerHTML = `${ir2}`
         irrf2.innerHTML = `R$ ${total_desconto_irrf2}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_12_15}</strong>`
-        art2.style.display = 'block'
+        art2.style.display = 'block'    
+        referencias1.style.top = '900px'
         // DESCONTOS IRRF
     } else if (valor_salario > 3305.23 && valor_salario <= 3751.05){
         inss1.innerText = `${in4}`
@@ -147,7 +151,8 @@ function calcular_liquido(){
         irrf1.innerHTML = `${ir2}`
         irrf2.innerHTML = `R$ ${total_desconto_irrf2}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_14_15}</strong>`
-        art2.style.display = 'block'
+        art2.style.display = 'block'    
+        referencias1.style.top = '900px'
         // DESCONTOS INSS
     } else if (valor_salario > 3751.05 && valor_salario < 4664.68){
         inss1.innerText = `${in4}`
@@ -155,7 +160,8 @@ function calcular_liquido(){
         irrf1.innerHTML = `${ir3}`
         irrf2.innerHTML = `R$ ${total_desconto_irrf3}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_14_22_5}</strong>`
-        art2.style.display = 'block'
+        art2.style.display = 'block'    
+        referencias1.style.top = '900px'
         // DESCONTOS IRRF
     } else if (valor_salario <= 4664.68 && valor_salario <= 6433.57){
         inss1.innerText = `${in4}`
@@ -163,6 +169,170 @@ function calcular_liquido(){
         irrf1.innerHTML = `${ir4}`
         irrf2.innerHTML = `R$ ${total_desconto_irrf4}`
         total_salario_liquido.innerHTML = `<strong>R$ ${salario_14_27_5}</strong>`
-        art2.style.display = 'block'
+        art2.style.display = 'block'    
+        referencias1.style.top = '900px'
     }
+}
+
+function informar1(){
+    var informacao1 = document.getElementsByTagName('span')[0]
+    informacao1.style.display = 'block'
+}
+function informar2(){
+    var informacao2 = document.getElementsByTagName('span')[1]
+    informacao2.style.display = 'block'
+}
+function informar3(){
+    var informacao3 = document.getElementsByTagName('span')[2]
+    informacao3.style.display = 'block'
+}
+function informar4(){
+    var informacao4 = document.getElementsByTagName('span')[3]
+    informacao4.style.display = 'block'
+}
+function informar5(){
+    var informacao5 = document.getElementsByTagName('span')[4]
+    informacao5.style.display = 'block'
+}
+function informar6(){
+    var informacao6 = document.getElementsByTagName('span')[5]
+    informacao6.style.display = 'block'
+}
+function informar7(){
+    var informacao7 = document.getElementsByTagName('span')[6]
+    informacao7.style.display = 'block'
+}
+////////////////////////////////////////////////////////////////
+function retirar_info1(){
+    var informacao1 = document.getElementsByTagName('span')[0]
+    informacao1.style.display = 'none'
+}
+function retirar_info2(){
+    var informacao2 = document.getElementsByTagName('span')[1]
+    informacao2.style.display = 'none'
+}
+function retirar_info3(){
+    var informacao3 = document.getElementsByTagName('span')[2]
+    informacao3.style.display = 'none'
+}
+function retirar_info4(){
+    var informacao4 = document.getElementsByTagName('span')[3]
+    informacao4.style.display = 'none'
+}
+function retirar_info5(){
+    var informacao5 = document.getElementsByTagName('span')[4]
+    informacao5.style.display = 'none'
+}
+function retirar_info6(){
+    var informacao6 = document.getElementsByTagName('span')[5]
+    informacao6.style.display = 'none'
+}
+function retirar_info7(){
+    var informacao7 = document.getElementsByTagName('span')[6]
+    informacao7.style.display = 'none'
+}
+///////////////////////////////////////////////////////////////
+/*
+function referencia1(){
+    var info1 = document.getElementsByClassName('info1')[0]
+    info1.style.display = 'block'
+}
+function referencia2(){
+    var info2 = document.getElementsByClassName('info2')[0]
+    info2.style.display = 'block'
+}
+function referencia3(){
+    var info3 = document.getElementsByClassName('info3')[0]
+    info3.style.display = 'block'
+}
+function referencia4(){
+    var info4 = document.getElementsByClassName('info4')[0]
+    info4.style.display = 'block'
+}
+function referencia5(){
+    var info5 = document.getElementsByClassName('info5')[0]
+    info5.style.display = 'block'
+}
+function referencia6(){
+    var info6 = document.getElementsByClassName('info6')[0]
+    info6.style.display = 'block'
+}*/
+/////////////////////////////////////////////////////////////
+function retirar_ref1(){
+    var info1 = document.getElementsByClassName('info1')[0]
+    info1.style.display = 'none'
+}
+function retirar_ref2(){
+    var info2 = document.getElementsByClassName('info2')[0]
+    info2.style.display = 'none'
+}
+function retirar_ref3(){
+    var info3 = document.getElementsByClassName('info3')[0]
+    info3.style.display = 'none'
+}
+function retirar_ref4(){
+    var info4 = document.getElementsByClassName('info4')[0]
+    info4.style.display = 'none'
+}
+function retirar_ref5(){
+    var info5 = document.getElementsByClassName('info5')[0]
+    info5.style.display = 'none'
+}
+function retirar_ref6(){
+    var info6 = document.getElementsByClassName('info6')[0]
+    info6.style.display = 'none'
+}
+
+///////////////////////////////////////////////////////////
+
+function mover1(){
+    var info1 = document.getElementsByClassName('info1')[0]
+    info1.style.display = 'block'
+}
+function mover2(){
+    var info2 = document.getElementsByClassName('info2')[0]
+    info2.style.display = 'block'
+}
+function mover3(){
+    var info3 = document.getElementsByClassName('info3')[0]
+    info3.style.display = 'block'
+}
+function mover4(){
+    var info4 = document.getElementsByClassName('info4')[0]
+    info4.style.display = 'block'
+}
+function mover5(){
+    var info5 = document.getElementsByClassName('info5')[0]
+    info5.style.display = 'block'
+}
+function mover6(){
+    var info6 = document.getElementsByClassName('info6')[0]
+    info6.style.display = 'block'
+}
+
+///////////////////////////////////////////////////////////
+
+function sair1(){
+    var info1 = document.getElementsByClassName('info1')[0]
+    info1.style.display = 'none'
+}
+function sair2(){
+    var info2 = document.getElementsByClassName('info2')[0]
+    info2.style.display = 'none'
+}
+function sair3(){
+    var info3 = document.getElementsByClassName('info3')[0]
+    info3.style.display = 'none'
+}
+function sair4(){
+    var info4 = document.getElementsByClassName('info4')[0]
+    info4.style.display = 'none'
+}
+function sair5(){
+    var info5 = document.getElementsByClassName('info5')[0]
+    info5.style.display = 'none'
+}
+function sair6(){
+    var info6 = document.getElementsByClassName('info6')[0]
+    info6.style.display = 'none'
 }

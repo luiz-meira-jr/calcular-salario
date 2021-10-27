@@ -6,35 +6,34 @@ header{
 }
 main{
     top: 50px;
-    width: 500px;
+    width: 450px;
 }
 .calculadora_salario_liquido{
     background-color: white;
-    width: 500px;
-    height: 380px;
-    padding: 5px 20px 20px 20px;
+    width: 420px;
+    height: 310px;
 }
 div > strong{
     color: rgb(45, 45, 255);
     font-size: 15px;
 }
-.salario_bruto_info:hover+span{
+.salario_bruto_info:hover + span{
     display: block;
 }
 .salario_bruto_info{
     width: 115px;
 }
-.salario_bruto_info+span{
+.salario_bruto_info + span{
     position: absolute;
     display: none;
     background-color: rgb(70, 70, 255);
     color: white;
     padding: 8px;
-    height: 140px;
+    height: 120px;
     width: 200px;
     float: right;
-    left: 173px;
-    top: 81px;
+    left: 153px;
+    top: 69px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
@@ -50,11 +49,11 @@ div > strong{
     background-color: rgb(70, 70, 255);
     color: white;
     padding: 8px;
-    height: 140px;
+    height: 123px;
     width: 220px;
     float: right;
-    left: 157px;
-    top: 163px;
+    left: 137px;
+    top: 151px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
@@ -67,13 +66,12 @@ div > strong{
     background-color: rgb(70, 70, 255);
     color: white;
     padding: 8px;
-    height: 130px;
+    height: 120px;
     width: 200px;
-    left: 172px;
-    top: 490px;
+    left: 153px;
+    top: 399px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
-    
 }
 .salario_bruto_horas_info:hover+span{
     display: block;
@@ -86,13 +84,13 @@ div > strong{
     display: none;
     background-color: rgb(70, 70, 255);
     color: white;
-    padding: 8px;
+    padding: 5px;
     height: 40px;
-    width: 170px;
-    left: 356px;
-    top: 577px;
+    width: 160px;
+    left: 155px;
+    top: 502px;
     text-align: center;
-    border-radius: 0px 15px 15px 15px;
+    border-radius: 15px 0px 15px 15px;
 }
 .quantidade_horas_info:hover+span{
     display: block;
@@ -105,11 +103,11 @@ div > strong{
     display: none;
     background-color: rgb(70, 70, 255);
     color: white;
-    padding: 8px;
+    padding: 6px;
     height: 60px;
     width: 200px;
-    left: 225px;
-    top: 664px;
+    left: 206px;
+    top: 573px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
@@ -124,13 +122,13 @@ div > strong{
     display: none;
     background-color: rgb(70, 70, 255);
     color: white;
-    padding: 8px;
+    padding: 5px;
     height: 60px;
     width: 200px;
-    left: 304px;
-    top: 751px;
+    left: 64px;
+    top: 675px;
     text-align: center;
-    border-radius: 0px 15px 15px 15px;
+    border-radius: 15px 0px 15px 15px;
 }
 .horas_feriados_info:hover+span{
     display: block;
@@ -143,11 +141,11 @@ div > strong{
     display: none;
     background-color: rgb(70, 70, 255);
     color: white;
-    padding: 8px;
-    height: 60px;
-    width: 200px;
-    left: 231px;
-    top: 838px;
+    padding: 5px;
+    height: 50px;
+    width: 196px;
+    left: 212px;
+    top: 748px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
@@ -178,10 +176,9 @@ div > strong{
 }
 .calculadora_horas_extras{
     background-color: white;
-    width: 500px;
-    height: 500px;
-    padding: 5px 20px 20px 20px;
-    position: ;
+    width: 420px;
+    height: 570px;
+    margin: 0px;
 }
 .calculadora_horas_extras > h2{
     font-size: 20px;
@@ -221,12 +218,11 @@ div > strong{
 #referencias{
     display: inline-block;
     background-color: white;
-    padding: 15px 0px 0px 50px;
+    padding-left: 15px;
     position: relative;
-    margin: 15px;
     border-radius: 10px;
     top: 80px;
-    width: 1000px;
+    width: 440px;
     height: 600px;
 }
 #resultados_salario_liquido{
@@ -291,7 +287,7 @@ td{
     border-color: black;
 }
 .info1{
-    height: 130px;
+    height: 108px;
     width: 250px;
     background-color: rgb(70, 70, 255);
     color: white;
@@ -302,8 +298,8 @@ td{
     text-align: center;
 }
 .info2{
-    height: 140px;
-    width: 600px;
+    height: 165px;
+    width: 400px;
     background-color: rgb(70, 70, 255);
     color: white;
     border-radius: 15px 15px 15px 15px;
@@ -313,8 +309,8 @@ td{
     text-align: center;
 }
 .info3{
-    height: 100px;
-    width: 450px;
+    height: 90px;
+    width: 390px;
     background-color: rgb(70, 70, 255);
     color: white;
     border-radius: 15px 15px 15px 15px;
@@ -324,7 +320,7 @@ td{
     text-align: center;
 }
 .info4{
-    height: 180px;
+    height: 150px;
     width: 350px;
     background-color: rgb(70, 70, 255);
     color: white;
@@ -335,7 +331,7 @@ td{
     text-align: center;
 }
 .info5{
-    height: 150px;
+    height: 110px;
     width: 250px;
     background-color: rgb(70, 70, 255);
     color: white;
@@ -346,8 +342,8 @@ td{
     text-align: center;
 }
 .info6{
-    height: 230px;
-    width: 450px;
+    height: 210px;
+    width: 400px;
     background-color: rgb(70, 70, 255);
     color: white;
     border-radius: 15px 15px 15px 15px;
@@ -361,22 +357,22 @@ td{
     color: white;
 }
 .referencia1{
-    width: 147px;
+    width: 121px;
 }
 .referencia2{
-    width: 272px;
+    width: 220px;
 }
 .referencia3{
-    width: 226px;
+    width: 185px;
 }
 .referencia4{
-    width: 315px;
+    width: 255px;
 }
 .referencia5{
-    width: 321px;
+    width: 261px;
 }
 .referencia6{
-    width: 446px;
+    width: 360px;
 }
 .referencia1:hover + .info1{
     display: block;
