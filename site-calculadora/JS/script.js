@@ -17,6 +17,9 @@ function calcular_horas(){
     var total_hora_feriado = document.getElementById('total_hora_feriado')
     var total_hora_noturna = document.getElementById('total_hora_noturna')
     var total_salario_bruto = document.getElementById('total_salario_bruto')
+    
+    /////// CÁLCULOS ///////
+    
     var calculo_valor_horas = n1 / n2
     var calculo_valor_horas_extras = calculo_valor_horas / 2 + calculo_valor_horas
     var calculo_valor_horas_feriados = calculo_valor_horas * 2
