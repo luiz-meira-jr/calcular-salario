@@ -6,8 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular Salário Líquido</title>
     <link rel="shortcut icon" href="../IMAGENS/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/salario_liquido.css">
 </head>
 <body>
-    
+    <header>
+        <img class="header" src="../IMAGENS/Cálculo-Encargos-Trabalhistas.jpg" alt="Imagem de capa - 'Cálculos'">
+        <h1>CALCULADORA ONLINE</h1>
+        <nav>
+            <li><a href="decimo_terceiro.html" target="_blank">Calcular Décimo Terceiro</a></li>
+            <li><a href="recisao_clt.html" target="_blank">Calcular Recisão CLT</a></li>
+            <li><a href="fgts.html" target="_blank">Calcular FGTS</a></li>
+            <li><a href="ferias.html" target="_blank">Calcular Férias</a></li>
+            <li><a href="seguro_desemprego.html" target="_blank">Simular Seguro-desemprego</a></li>
+            <li><a href="horas_extras.html" target="_blank">Calcular Horas Extras</a></li>
+            <li><a href="salario_liquido.html" target="_blank">Calcular Salário Líquido</a></li>
+        </nav>
+        <nav class="nav2"> <br> <img class="voltar" onclick="fechar()" src="../IMAGENS/voltar-20x17.png" alt=""><img class="menu" onclick="abrir()" src="../IMAGENS/menu-hamburguer-20x17.png" alt=""></nav>
+        <code>
+            <li><a href="decimo_terceiro.html" target="_blank">Calcular Décimo Terceiro</a></li>
+            <li><a href="recisao_clt.html" target="_blank">Calcular Recisão CLT</a></li>
+            <li><a href="fgts.html" target="_blank">Calcular FGTS</a></li>
+            <li><a href="ferias.html" target="_blank">Calcular Férias</a></li>
+            <li><a href="seguro_desemprego.html" target="_blank">Simular Seguro-desemprego</a></li>
+            <li><a href="horas_extras.html" target="_blank">Calcular Horas Extras</a></li>
+            <li><a href="salario_liquido.html" target="_blank">Calcular Salário Líquido</a></li>
+        </code>
+    </header>
+    <main id="main">
+        <div class="calculadora_salario_liquido"> <!--Primeira div, responsável pelo cálculo do salário líquido-->
+            <h2>CALCULADORA DE SALÁRIO LÍQUIDO</h2>
+            <div class="salario_bruto_info">Salário bruto<strong onclick="informar6()" onmouseenter="move_info6()" onmouseout="sair_info6()"> ⓘ</strong></div><!-- st01 => salario_bruto_info -->
+            <span onclick="retirar_info6()">Salário registrado na carteira de trabalho, remuneração que um trabalhador recebe por mês, sem considerar os descontos oficiais obrigatórios.</span>
+            <input type="number" name="salario" id="campo_salario_bruto"> <br> <!-- salario => campo_salario_bruto -->
+            <div class="descontos_info">Descontos<strong onclick="informar7()" onmouseenter="move_info7()" onmouseout="sair_info7()"> ⓘ</strong></div> <!-- st02 => descontos_info -->
+            <span onclick="retirar_info7()">Descontos não oficiais e obrigatórios. Descontos alternativos acordados com a sua empresa ou determinação jurídica específica como pensão alimentícia.</span>
+            <input type="number" name="descontos" id="campo_descontos"> <br> <!-- descontos => campo_descontos -->
+            <input id="calcular_liquido" type="button" value="Calcular" onclick="calcular_liquido()"> <!-- cal2 => calcular_liquido -->
+            <article id="resultados_salario_liquido"> <!-- r2 => resultados_salario_liquido -->
+                <p><strong>Resultado</strong></p><br>
+                <table>
+                    <tr>
+                        <td class="descricao"><strong>Eventos</strong></td> <td class="descricao"><strong>Alícota Real</strong></td> <td class="descricao"><strong>Descontos</strong></td> <!-- desc => descricao-->
+                    </tr>
+                    <tr>
+                        <td>INSS</td> <td id="inss1"></td> <td id="inss2"></td>
+                    </tr>
+                    <tr>
+                        <td>IRRF</td> <td id="irrf1"></td> <td id="irrf2"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Valor salário líquido</strong></td> <td id="valor_salario_liquido"></td> <!-- sl1 => valor_salario_liquido -->
+                    </tr>
+                </table>
+            </article>
+        </div>
+        <div id="referencias"> <!-- prin03 => referencias -->
+            <h2 class="h2">Referências</h2><br><br>
+            <div class="info1" onmouseenter="referencia1()" onmousemove="referencia01()" onmouseout="retirar_ref1()"><strong class="titulo">Oque é salário?</strong> <br><br> Trata-se da remuneração mensal básica recebida pelo funcionário, definida no momento da contratação. Essa é a base para definir o valor-hora e, posteriormente, o adicional de trabalho excedente.</div> <!-- info01 => info1 -->
+            <div class="info2" onmouseenter="referencia2()" onmousemove="referencia02()" onmouseout="retirar_ref2()"><strong class="titulo">Como saber a jornada mensal?</strong> <br><br> Também é importante saber a jornada mensal de trabalho, ou seja, quantas horas de serviço você realiza por mês. Para isso, basta multiplicar a jornada diária pelo número de dias trabalhados na semana, e, em seguida, multiplicar esse valor por 4, o número de semanas úteis em um mês. Por exemplo, se você trabalha de segunda a sexta, das 09h às 18h, com uma hora de intervalo, sua jornada diária é de 8 horas. Dessa forma, o número de horas trabalhadas em uma semana será 40. Multiplicando por 4, a jornada mensal será de 160 horas.</div> <!-- info02 => info2 -->
+            <div class="info3" onmouseenter="referencia3()" onmousemove="referencia03()" onmouseout="retirar_ref3()"><strong class="titulo">Valor da hora de trabalho</strong> <br><br> A calculadora de horas extras pode calcular o valor da hora de trabalho automaticamente, mas, se desejar conhecer essa informação, basta dividir o salário pela jornada mensal. Conforme explicamos acima, ele indicará o valor da hora da sua hora de trabalho.</div> <!-- info03 => info3 -->
+            <div class="info4" onmouseenter="referencia4()" onmousemove="referencia04()" onmouseout="retirar_ref4()"><strong class="titulo">Quantidade de horas extras normais</strong><br><br> O sistema também irá solicitar o número de horas extras normais feitas no mês. Por isso, é importante ter esse acompanhamento periódico. Caso não tenha um monitoramento próprio, é possível solicitar essa quantidade no setor de Recursos Humanos da empresa. Geralmente, empresas que possuem registro de ponto também possibilitam a consulta na plataforma utilizada, ou através de impressão dos dados.</div> <!-- info04 => info4 -->
+            <div class="info5" onmouseenter="referencia5()" onmousemove="referencia05()" onmouseout="retirar_ref5()"><strong class="titulo">Quantidade de horas extras noturnas</strong> <br><br> Conforme explicamos anteriormente, as horas extras noturnas recebem um adicional superior às normais. Por esse motivo, a calculadora de horas extras solicita essa informação, para retornar uma estimativa mais concreta.</div> <!-- info05 => info5 -->
+            <div class="info6" onmouseenter="referencia6()" onmousemove="referencia06()" onmouseout="retirar_ref6()"><strong class="titulo">Quantidade de horas extras aos domingos e feriados</strong><br><br> Por fim, é importante conhecer a quantidade de horas extras realizadas aos domingos e feriados também. Isso porque a porcentagem adicional é maior do que as demais, e faz diferença na hora de calcular os seus recebimentos. Todas essas informações devem estar disponíveis para o funcionário no departamento responsável da empresa. Assim, com esses dados, a calculadora de horas extras poderá informar a previsão da remuneração a que você tem direito.</div> <!-- info06 => info6 -->
+        </div>
+    </main>
+    <script src="../JS/salario_liquido.js"></script>
 </body>
 </html>
