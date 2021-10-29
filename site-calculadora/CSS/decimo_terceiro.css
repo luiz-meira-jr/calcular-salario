@@ -75,42 +75,42 @@ div > strong{
     font-size: 15px;
     font-weight: 500;
 }
-.salario_bruto_horas_info{
+.salario_bruto_info{
     width: 126px;
 }
-.salario_bruto_horas_info + span{
+.salario_bruto_info + span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
     color: white;
     padding: 8px;
-    height: 130px;
+    height: 100px;
     width: 200px;
     float: right;
     right: 239px;
-    bottom: 20px;
+    bottom: 18px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.quantidade_horas_info{
-    width: 356px;
+.numero_dependentes_info{
+    width: 220px;
 }
-.quantidade_horas_info + span{
+.numero_dependentes_info + span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
     color: white;
     padding: 8px;
-    height: 40px;
+    height: 160px;
     width: 170px;
     float: right;
-    right: 41px;
-    bottom: 20px;
+    right: 175px;
+    bottom: 18px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
 .horas_extras_info{
-    width: 195px;
+    width: 320px;
 }
 .horas_extras_info + span{
     position: relative;
@@ -121,46 +121,46 @@ div > strong{
     height: 60px;
     width: 200px;
     float: right;
-    right: 171px;
-    bottom: 20px;
+    right: 45px;
+    bottom: 18px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.horas_feriados_info{
-    width: 292px;
+.meses_trabalhados_info{
+    width: 270px;
 }
-.horas_feriados_info + span{
+.meses_trabalhados_info + span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
     color: white;
     padding: 8px;
-    height: 60px;
+    height: 100px;
     width: 200px;
     float: right;
-    right: 73px;
-    bottom: 20px;
+    right: 97px;
+    bottom: 18px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.horas_extras_noturnas_info{
-    width: 202px;
+.tipo_pagamento_info{
+    width: 180px;
 }
-.horas_extras_noturnas_info + span{
+.tipo_pagamento_info + span{
     position: relative;
     display: none;
     background-color: rgb(70, 70, 255);
     color: white;
     padding: 8px;
-    height: 60px;
+    height: 100px;
     width: 200px;
     float: right;
-    right: 164px;
-    bottom: 20px;
+    right: 188px;
+    bottom: 18px;
     text-align: center;
     border-radius: 0px 15px 15px 15px;
 }
-.calculadora_horas_extras{
+.calculadora_decimo_terceiro{
     background-color: white;
     width: 633px;
     height: 550px;
@@ -169,16 +169,16 @@ div > strong{
     float: none;
     left: 400px;
 }
-.calculadora_horas_extras > h2{
+.calculadora_decimo_terceiro > h2{
     font-size: 20px;
     margin-left: 40px;
 }
-.calculadora_horas_extras > div{
+.calculadora_decimo_terceiro > div{
     height: 35px;
     line-height: 35px;
     margin-left: 50px;
 }
-.calculadora_horas_extras > input{
+.calculadora_decimo_terceiro > input{
     margin-left: 50px;
     background-color: rgba(173, 216, 230, 0.377);
     height: 50px;
@@ -187,6 +187,17 @@ div > strong{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     border-width: 0px;
+}
+.calculadora_decimo_terceiro > select{
+    margin-left: 50px;
+    background-color: rgba(173, 216, 230, 0.377);
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border-width: 0px;
+    padding-left: 10px;
 }
 #calcular_horas{
     width: 160px;
@@ -211,7 +222,7 @@ div > strong{
     position: relative;
     margin: 15px;
     border-radius: 10px;
-    top: 100px;
+    top: 350px;
     width: 1250px;
     height: 600px;
 }
@@ -220,9 +231,9 @@ div > strong{
     position: relative;
     left: 520px;
 }
-.resultados_horas_extras{
+.resultados_decimo_terceiro{
     margin-top: 50px;
-    display: none;
+    display: block;
 }
 article>p{
     font-size: 20px;
@@ -245,30 +256,28 @@ td{
     font-size: 16px;
 }
 .info1{
-    height: 280px;
+    height: 470px;
     width: 350px;
     border-radius: 15px 15px 15px 15px;
     font-size: 15px;
     display: inline-block;
     padding: 10px;
-    top: -132px;
+    top: 8px;
     position: relative;
-    text-align: center;
 }
 .info2{
-    height: 280px;
+    height: 470px;
     width: 350px;
     border-radius: 15px 15px 15px 15px;
     font-size: 15px;
     display: inline-block;
     padding: 10px;
-    text-align: center;
     left: 50px;
-    top: 12px;
+    top: -82px;
     position: relative;
 }
 .info3{
-    height: 280px;
+    height: 470px;
     width: 350px;
     border-radius: 15px 15px 15px 15px;
     font-size: 15px;
@@ -276,34 +285,32 @@ td{
     padding: 10px;
     text-align: center;
     left: 100px;
-    bottom: 115px;
+    bottom: -8px;
     position: relative;
 }
 .info4{
-    height: 280px;
+    height: 470px;
     width: 350px;
     border-radius: 15px 15px 15px 15px;
     font-size: 15px;
     display: inline-block;
     padding: 10px;
-    bottom: 180px;
+    bottom: 78px;
     position: relative;
-    text-align: center;
 }
 .info5{
-    height: 280px;
+    height: 470px;
     width: 350px;
     border-radius: 15px 15px 15px 15px;
     font-size: 15px;
     display: inline-block;
     padding: 10px;
-    text-align: center;
     left: 50px;
-    bottom: 252px;
+    bottom: 240px;
     position: relative;
 }
 .info6{
-    height: 280px;
+    height: 470px;
     width: 350px;
     border-radius: 15px 15px 15px 15px;
     font-size: 16px;
@@ -312,7 +319,7 @@ td{
     text-align: center;
     position: relative;
     left: 100px;
-    bottom: 108px;
+    bottom: 258px;
 }
 .referencia1{
     width: 150px;
@@ -356,11 +363,11 @@ td{
     padding: 10px;
     border-radius: 10px;
 }
-.salario_bruto_horas_info strong:hover{
+.salario_bruto_info strong:hover{
     color: blue;
     font-weight: 600;
 }
-.quantidade_horas_info strong:hover{
+.numero_dependentes_info strong:hover{
     color: blue;
     font-weight: 600;
 }
@@ -368,13 +375,24 @@ td{
     color: blue;
     font-weight: 600;
 }
-.horas_feriados_info strong:hover{
+.meses_trabalhados_info strong:hover{
     color: blue;
     font-weight: 600;
 }
-.horas_extras_noturnas_info strong:hover{
+.tipo_pagamento_info strong:hover{
     color: blue;
     font-weight: 600;
+}
+br + strong{
+    color: black;
+    font-weight: 600;
+}
+strong+ strong{
+    color: black;
+    font-weight: 600;
+}
+strong + a{
+    color: blue;
 }
 /*
 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -419,12 +437,12 @@ td{
         display: block;
         width: 200px;
     }
+    code li:hover{
+        color: white;
+    }
     code li, a{
         text-decoration: none;
         color: black;
-    }
-    code li:hover{
-        color: white;
     }
     .menu{
         padding: 0px 0px 10px 20px;
@@ -450,10 +468,10 @@ td{
         font-size: 12.5px;
         font-weight: 500;
     }
-    .salario_bruto_horas_info{
+    .salario_bruto_info{
         width: 115px;
     }
-    .salario_bruto_horas_info + span{
+    .salario_bruto_info + span{
         position: absolute;
         display: none;
         background-color: rgb(70, 70, 255);
@@ -466,13 +484,13 @@ td{
         text-align: center;
         border-radius: 0px 15px 15px 15px;
     }
-    .salario_bruto_horas_info:hover+span{
+    .salario_bruto_info:hover+span{
         display: none;
     }
-    .quantidade_horas_info{
+    .numero_dependentes_info{
         width: 344px;
     }
-    .quantidade_horas_info + span{
+    .numero_dependentes_info + span{
         position: absolute;
         display: none;
         background-color: rgb(70, 70, 255);
@@ -485,7 +503,7 @@ td{
         text-align: center;
         border-radius: 15px 0px 15px 15px;
     }
-    .quantidade_horas_info:hover+span{
+    .numero_dependentes_info:hover+span{
         display: none;
     }
     .horas_extras_info{
@@ -507,10 +525,10 @@ td{
     .horas_extras_info:hover+span{
         display: none;
     }
-    .horas_feriados_info{
+    .meses_trabalhados_info{
         width: 282px;
     }
-    .horas_feriados_info + span{
+    .meses_trabalhados_info + span{
         position: absolute;
         display: none;
         background-color: rgb(70, 70, 255);
@@ -523,13 +541,13 @@ td{
         text-align: center;
         border-radius: 15px 0px 15px 15px;
     }
-    .horas_feriados_info:hover+span{
+    .meses_trabalhados_info:hover+span{
         display: none;
     }
-    .horas_extras_noturnas_info{
+    .tipo_pagamento_info{
         width: 192px;
     }
-    .horas_extras_noturnas_info + span{
+    .tipo_pagamento_info + span{
         position: absolute;
         display: none;
         background-color: rgb(70, 70, 255);
@@ -542,10 +560,10 @@ td{
         text-align: center;
         border-radius: 0px 15px 15px 15px;
     }
-    .horas_extras_noturnas_info:hover+span{
+    .tipo_pagamento_info:hover+span{
         display: none;
     }
-    .calculadora_horas_extras{
+    .calculadora_decimo_terceiro{
         background-color: white;
         width: 420px;
         height: 570px;
@@ -555,16 +573,16 @@ td{
         float: none;
         left: 0px;
     }
-    .calculadora_horas_extras > h2{
+    .calculadora_decimo_terceiro > h2{
         font-size: 20px;
         margin-left: 40px;
     }
-    .calculadora_horas_extras > div{
+    .calculadora_decimo_terceiro > div{
         height: 35px;
         line-height: 35px;
         margin-left: 50px;
     }
-    .calculadora_horas_extras > input{
+    .calculadora_decimo_terceiro > input{
         margin-left: 50px;
         background-color: rgba(173, 216, 230, 0.377);
         height: 50px;
@@ -606,9 +624,9 @@ td{
         left: 170px;
         position: relative;
     }
-    .resultados_horas_extras{
+    .resultados_decimo_terceiro{
         margin-top: 0px;
-        display: none;
+        display: block;
     }
     .info1{
         height: 140px;

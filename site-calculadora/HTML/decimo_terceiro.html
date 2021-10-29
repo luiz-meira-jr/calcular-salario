@@ -5,9 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular Décimo Terceiro</title>
+    <link rel="stylesheet" href="../CSS/decimo_terceiro.css">
     <link rel="shortcut icon" href="../IMAGENS/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    
+    <header>
+        <img class="header" src="../IMAGENS/Cálculo-Encargos-Trabalhistas.jpg" alt="Imagem de capa - 'Cálculos'">
+        <h1>CALCULADORA ONLINE</h1>
+        <nav>
+            <a href="decimo_terceiro.html"><li id="destaque">Calcular Décimo Terceiro</li></a>
+            <a href="recisao_clt.html"><li>Calcular Recisão CLT</li></a>
+            <a href="fgts.html"><li>Calcular FGTS</li></a>
+            <a href="ferias.html"><li>Calcular Férias</li></a>
+            <a href="seguro_desemprego.html"><li>Simular Seguro-desemprego</li></a>
+            <a href="horas_extras.html"><li>Calcular Horas Extras</li></a>
+            <a href="salario_liquido.html"><li>Calcular Salário Líquido</li></a>
+        </nav>
+        <nav class="nav2"> <br> <img class="voltar" onclick="fechar()" src="../IMAGENS/voltar-20x17.png" alt=""><img class="menu" onclick="abrir()" src="../IMAGENS/menu-hamburguer-20x17.png" alt=""></nav>
+        <code>
+            <a href="decimo_terceiro.html"><li id="destaque">Calcular Décimo Terceiro</li></a>
+            <a href="recisao_clt.html"><li>Calcular Recisão CLT</li></a>
+            <a href="fgts.html"><li>Calcular FGTS</li></a>
+            <a href="ferias.html"><li>Calcular Férias</li></a>
+            <a href="seguro_desemprego.html"><li>Simular Seguro-desemprego</li></a>
+            <a href="horas_extras.html"><li>Calcular Horas Extras</li></a>
+            <a href="salario_liquido.html"><li>Calcular Salário Líquido</li></a>
+        </code>
+    </header>
+
+    <main id="main">
+        <div class="calculadora_decimo_terceiro"> <!-- prin02 => calculadora_horas_extras -->
+            <h2>CALCULAR DÉCIMO TERCEIRO</h2>
+
+            <div class="salario_bruto_info">Salário bruto<strong onclick="informar1()" onmouseenter="move_info1()" onmouseout="sair_info1()"> ⓘ</strong></div> <!-- st001 => salario_bruto_horas_info -->
+            <span onclick="retirar_info1()"> Adicione o salário bruto recebido, aquele registrado em carteira sem contar os benefícios.</span>
+            <input type="number" name="" id="campo_salario_bruto"> <!-- sb => campo_salario_bruto_horas -->
+
+            <div class="horas_extras_info">Valor médio de horas extras mensais<strong onclick="informar3()" onmouseenter="move_info3()" onmouseout="sair_info3()"> ⓘ</strong></div> <!-- st003 => horas_extras_info -->
+            <span onclick="retirar_info3()">Caso faça horas extras, selecione o valor médio recebido por mês.</span>
+            <input type="number" name="" id="campo_horas_extras"> <!-- he => campo_horas_extras -->
+
+            <div class="meses_trabalhados_info">Número de meses trabalhados<strong onclick="informar4()" onmouseenter="move_info4()" onmouseout="sair_info4()"> ⓘ</strong></div> <!-- st004 => horas_feriados_info -->
+            <span onclick="retirar_info4()">Adicione o número de meses trabalhado no ano corrente, caso tenha trabalhado mais de 15 dias.</span>
+            <input type="number" name="" id="campo_meses_trabalhados"> <!-- hf => campo_horas_feriados -->
+
+            <div class="tipo_pagamento_info">Tipo de pagamento<strong onclick="informar5()" onmouseenter="move_info5()" onmouseout="sair_info5()"> ⓘ</strong></div> <!-- st005 => horas_extras_noturnas_info -->
+            <span onclick="retirar_info5()">Selecione como receberá seu décimo terceiro, se em parcela única ou dividido em duas parcelas.</span>
+             <select name="" id="campo_tipo_pagamento">
+                 <option value="1">Parcela única (novembro)</option>
+                 <option value="2">Primeira parcela (novembro)</option>
+                 <option value="3">Segunda parcela (dezembro)</option>
+             </select> <br> <br> <!-- hn => campo_horas_extras_noturnas -->
+
+            <input id="calcular_horas" type="button" value="Calcular" onclick="calcular_decimo()"> <!-- cal => calcular_horas -->
+            <article class="resultados_decimo_terceiro"> <!-- r1 => resultados_horas_extras -->
+              <p><strong>Resultado</strong></p><br>
+                <table>
+                    <tr>
+                        <td class="descricao"><strong>Eventos</strong></td> <td class="descricao"><strong>Alícota Real</strong></td> <td class="descricao"><strong>Proventos</strong></td> <td class="descricao" ><strong>Descontos</strong></td> <!-- desc => descricao-->
+                    </tr>
+                    <tr>
+                        <td>Salário Bruto</td> <td id="salario_bruto1"></td> <td id="salario_bruto2"></td> <td id="salario_bruto3"></td>
+                    </tr>
+                    <tr>
+                        <td>Horas Extras</td> <td id="horas_extras1"></td> <td id="horas_extras2"></td> <td id="horas_extras3"></td>
+                    </tr>
+                    <tr>
+                        <td>INSS</td> <td id="inss1"></td> <td id="inss2"></td> <td id="inss3"></td>
+                    </tr>
+                    <tr>
+                        <td>IRRF</td> <td id="irrf1"></td> <td id="irrf2"></td> <td id="irrf3"></td>
+                    </tr>
+                    <tr>
+                        <td>Consolidado</td> <td id="consolidado1"></td> <td id="consolidado2"></td> <td id="consolidado3 "></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>Décimo terceiro a receber</strong></td> <td colspan="2" id="valor_decimo_terceiro"></td> <!-- sl1 => valor_salario_liquido -->
+                    </tr>
+                </table>
+            </article>
+        </div>
+
+    <div id="referencias"> <!-- prin03 => referencias -->
+        <h2 class="h2">Referências</h2><br><br>
+        <div class="info1" onmouseenter="referencia1()" onmousemove="referencia01()" onmouseout="retirar_ref1()"><strong class="titulo">O que é o décimo terceiro salário?</strong> <br><br> O décimo terceiro salário é um direito garantido ao trabalhador. O valor pago sempre é proporcional a <strong>1/12 do salário por mês trabalhado durante o ano de referência.</strong> O prazo para pagamento depende de como o repasse do valor será feito. Se for em <strong>prestação única</strong>, a data limite é 30 de novembro. Se a opção da empresa for pelo pagamento em <strong>duas parcelas</strong>, então o recebimento será da seguinte forma: <br><br>
+            <strong>1ª parcela:</strong> deve ser quitada entre 1º de fevereiro e 30 de novembro. Pode ser adiantada no momento da saída de férias do trabalhador;<br>
+            <strong>2ª parcela:</strong> obrigatoriamente até o dia 20 de dezembro.</div> <!-- info01 => info1 -->
+
+        <div class="info2" onmouseenter="referencia2()" onmousemove="referencia02()" onmouseout="retirar_ref2()"><strong class="titulo">Como calcular o décimo terceiro salário?</strong> <br><br> Basicamente, você deve pegar o valor integral do salário (bruto) e dividi-lo por 12. Assim, terá a quantia mensal proporcional ao seu salário. Esse resultado deve ser multiplicado pelo total de meses trabalhados no ano. Como consequência, você verá quanto receberá de 13º salário. Por exemplo: <br><br> R$ 2.500 ÷ 12 = R$ 250 <br> R$ 250 x 12 (meses trabalhados) = R$ 3.000 <br><br> Nesse caso, R$ 3.000 é o valor bruto a ser recebido no 13º.</div> <!-- info02 => info2 -->
+
+        <div class="info3" onmouseenter="referencia3()" onmousemove="referencia03()" onmouseout="retirar_ref3()"><strong class="titulo">Como fazer o cálculo da parcela única</strong> <br><br> Veja quanto você recebe de salário no seu contracheque. O que vale é o valor bruto, ou seja, sem os descontos realizados. Por exemplo, se você ganha R$ 3.000 de <strong>salário bruto</strong>, mas recebe efetivamente R$ 2.700 de <strong>salário líquido</strong>, o que vale para o cálculo do décimo terceiro é o primeiro valor, R$ 3.000. O valor do salário bruto será o valor recebido caso tenha trabalhado os 12 meses do ano. Caso tenha sido admitido no mesmo ano, será necessário ajustar o valor para o número de meses trabalhados, considerando que trabalhou pelo menos 15 dias no mês de admissão. Do valor a ser recebido, é necessário fazer os descontos legais sobre o valor recebido, isso inclui <strong>INSS</strong> e <strong>IRRF</strong>. Caso queira saber seu salário líquido, use a <a target="_blank" href="salario_liquido.html">Calculadora de salário líquido.</a></div> <!-- info03 => info3 -->
+
+        <div class="info4" onmouseenter="referencia4()" onmousemove="referencia04()" onmouseout="retirar_ref4()"><strong class="titulo">Primeira parcela do 13º</strong><br><br> No caso do parcelamento do 13º, a primeira parcela pode ser paga entre os meses de fevereiro e novembro. Para calculá-la, basta dividir o salário por 12, multiplicar o resultado pelo número de meses trabalhados e dividir por 2. Nesse caso, os descontos de INSS e IR incidirão apenas sobre a segunda parcela. Para quem trabalhou os 12 meses do ano, basta dividir o salário bruto por 2: <br><br> R$ 3.000 ÷ 2 = R$ 1.500 ou <br> R$ 3.000 x 50% = R$ 1.500 (1ª parcela) <br><br> Caso não tenha trabalhado os 12 meses do ano, é preciso calcular o 13º proporcional. Essa é a situação de quem foi contratado no meio do ano corrente ou foi demitido sem justa causa. Dessa forma, o cálculo proporcional é o seguinte: <br><br> R$ 3.000 ÷ 12 = R$ 250 <br> R$ 250 x 9 (meses trabalhados) = R$ 2.250 <br> R$ 2.250 ÷ 2 = R$ 1.125 (1ª parcela)</div> <!-- info04 => info4 -->
+
+        <div class="info5" onmouseenter="referencia5()" onmousemove="referencia05()" onmouseout="retirar_ref5()"><strong class="titulo">Segunda parcela do 13º</strong> <br><br> Para a segunda parcela, consideramos a incidência de INSS e Imposto de Renda Retido na Fonte (IRRF) que não foram descontadas na primeira parcela, mas que já constam no cálculo da parcela única. Nesse caso, usando o mesmo exemplo, basta diminuir o valor que já foi pago na primeira parcela do valor líquido que foi encontrado na parcela única. <br><br> R$ 3.000 – descontos INSS e IRRF = R$ 2.661, 21 <br> R$ 2.661,21 – R$ 1.500 (1ª parcela) = R$ 1.161,21 (2ª parcela)</div> <!-- info05 => info5 -->
+
+        <div class="info6" onmouseenter="referencia6()" onmousemove="referencia06()" onmouseout="retirar_ref6()"><strong class="titulo">Cálculo do 13º com horas extras</strong><br><br> Quando você fez horas extras, também precisa inserir essa informação na sua calculadora de décimo terceiro ou na contagem manual. Como fazer isso? Primeiro, some todas as horas extras realizadas até outubro. Esse mês é o limite, porque a primeira parcela já é paga em novembro. Somando todos os valores você obtém o <strong>total de horas extras</strong>. Agora você precisa saber qual é o <strong>valor da sua hora extra trabalhada.</strong> Para saber isso, use a <a target="_blank" href="horas_extras.html">Calculadora de horas extras.</a></div> <!-- info06 => info6 -->
+    </div>
+</main>
+<script src="../JS/decimo_terceiro.js"></script>
 </body>
 </html>

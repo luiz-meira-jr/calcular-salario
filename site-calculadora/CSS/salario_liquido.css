@@ -22,6 +22,9 @@ nav{
     width: 483px;
     display: none;
 }
+#destaque{
+    background-color: rgb(0, 0, 190);
+}
 li{
     background-color: rgb(40, 40, 255);
     display: inline-block;
@@ -33,6 +36,13 @@ li{
 }
 li:hover{
     background-color: rgb(0, 0, 190);
+}
+a li{
+    text-decoration: none;
+    color: white;
+}
+code a{
+    color: black;
 }
 h1{
     font-size: 100px;
@@ -365,6 +375,7 @@ td{
     padding: 10px;
     bottom: 180px;
     position: relative;
+    text-align: center;
 }
 .info5{
     height: 280px;
@@ -527,13 +538,21 @@ code a{
     code{
         display: none;
     }
+    #destaque{
+        background-color: rgb(0, 0, 190);
+        color: white;
+    }
     li{
         background-color: rgb(182, 182, 255);
         color: black;
         display: block;
         width: 200px;
     }
-    code li:hover a{
+    code li, a{
+        text-decoration: none;
+        color: black;
+    }
+    code li:hover{
         color: white;
     }
     .menu{
