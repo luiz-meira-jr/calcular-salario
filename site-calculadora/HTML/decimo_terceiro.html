@@ -41,16 +41,16 @@
             <span onclick="retirar_info1()"> Adicione o salário bruto recebido, aquele registrado em carteira sem contar os benefícios.</span>
             <input type="number" name="" id="campo_salario_bruto"> <!-- sb => campo_salario_bruto_horas -->
 
-            <div class="horas_extras_info">Valor médio de horas extras mensais<strong onclick="informar3()" onmouseenter="move_info3()" onmouseout="sair_info3()"> ⓘ</strong></div> <!-- st003 => horas_extras_info -->
-            <span onclick="retirar_info3()">Caso faça horas extras, selecione o valor médio recebido por mês.</span>
+            <div class="horas_extras_info">Valor médio de horas extras mensais<strong onclick="informar2()" onmouseenter="move_info2()" onmouseout="sair_info2()"> ⓘ</strong></div> <!-- st003 => horas_extras_info -->
+            <span onclick="retirar_info2()">Caso faça horas extras, selecione o valor médio recebido por mês.</span>
             <input type="number" name="" id="campo_horas_extras"> <!-- he => campo_horas_extras -->
 
-            <div class="meses_trabalhados_info">Número de meses trabalhados<strong onclick="informar4()" onmouseenter="move_info4()" onmouseout="sair_info4()"> ⓘ</strong></div> <!-- st004 => horas_feriados_info -->
-            <span onclick="retirar_info4()">Adicione o número de meses trabalhado no ano corrente, caso tenha trabalhado mais de 15 dias.</span>
+            <div class="meses_trabalhados_info">Número de meses trabalhados<strong onclick="informar3()" onmouseenter="move_info3()" onmouseout="sair_info3()"> ⓘ</strong></div> <!-- st004 => horas_feriados_info -->
+            <span onclick="retirar_info3()">Adicione o número de meses trabalhado no ano corrente, caso tenha trabalhado mais de 15 dias.</span>
             <input type="number" name="" id="campo_meses_trabalhados"> <!-- hf => campo_horas_feriados -->
 
-            <div class="tipo_pagamento_info">Tipo de pagamento<strong onclick="informar5()" onmouseenter="move_info5()" onmouseout="sair_info5()"> ⓘ</strong></div> <!-- st005 => horas_extras_noturnas_info -->
-            <span onclick="retirar_info5()">Selecione como receberá seu décimo terceiro, se em parcela única ou dividido em duas parcelas.</span>
+            <div class="tipo_pagamento_info">Tipo de pagamento<strong onclick="informar4()" onmouseenter="move_info4()" onmouseout="sair_info4()"> ⓘ</strong></div> <!-- st005 => horas_extras_noturnas_info -->
+            <span onclick="retirar_info4()">Selecione como receberá seu décimo terceiro, se em parcela única ou dividido em duas parcelas.</span>
              <select name="" id="campo_tipo_pagamento">
                  <option value="1">Parcela única (novembro)</option>
                  <option value="2">Primeira parcela (novembro)</option>
@@ -77,10 +77,11 @@
                         <td>IRRF</td> <td id="irrf1"></td> <td id="irrf2"></td> <td id="irrf3"></td>
                     </tr>
                     <tr>
-                        <td>Consolidado</td> <td id="consolidado1"></td> <td id="consolidado2"></td> <td id="consolidado3 "></td>
+                        <td>Consolidado</td> <td id="consolidado1"></td> <td id="consolidado2"></td> <td id="consolidado3"></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><strong>Décimo terceiro a receber</strong></td> <td colspan="2" id="valor_decimo_terceiro"></td> <!-- sl1 => valor_salario_liquido -->
+                        <td colspan="2"><strong>Décimo terceiro a receber</strong></td> 
+                        <td colspan="2" id="valor_decimo_terceiro"></td> <!-- sl1 => valor_salario_liquido -->
                     </tr>
                 </table>
             </article>

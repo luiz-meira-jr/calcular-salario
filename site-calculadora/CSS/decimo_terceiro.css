@@ -469,7 +469,7 @@ strong + a{
         font-weight: 500;
     }
     .salario_bruto_info{
-        width: 115px;
+        width: 100px;
     }
     .salario_bruto_info + span{
         position: absolute;
@@ -477,37 +477,18 @@ strong + a{
         background-color: rgb(70, 70, 255);
         color: white;
         padding: 8px;
-        height: 120px;
+        height: 80px;
         width: 200px;
         left: 185px;
-        top: 78px;
+        top: 80px;
         text-align: center;
         border-radius: 0px 15px 15px 15px;
     }
     .salario_bruto_info:hover+span{
         display: none;
     }
-    .numero_dependentes_info{
-        width: 344px;
-    }
-    .numero_dependentes_info + span{
-        position: absolute;
-        display: none;
-        background-color: rgb(70, 70, 255);
-        color: white;
-        padding: 5px;
-        height: 40px;
-        width: 160px;
-        left: 187px;
-        top: 180px;
-        text-align: center;
-        border-radius: 15px 0px 15px 15px;
-    }
-    .numero_dependentes_info:hover+span{
-        display: none;
-    }
     .horas_extras_info{
-        width: 185px;
+        width: 255px;
     }
     .horas_extras_info + span{
         position: absolute;
@@ -517,16 +498,16 @@ strong + a{
         padding: 6px;
         height: 60px;
         width: 200px;
-        left: 227px;
-        top: 267px;
+        left: 115px;
+        top: 180px;
         text-align: center;
-        border-radius: 0px 15px 15px 15px;
+        border-radius: 15px 0px 15px 15px;
     }
     .horas_extras_info:hover+span{
         display: none;
     }
     .meses_trabalhados_info{
-        width: 282px;
+        width: 220px;
     }
     .meses_trabalhados_info + span{
         position: absolute;
@@ -534,10 +515,10 @@ strong + a{
         background-color: rgb(70, 70, 255);
         color: white;
         padding: 5px;
-        height: 60px;
+        height: 80px;
         width: 200px;
-        left: 95px;
-        top: 353px;
+        left: 80px;
+        top: 267px;
         text-align: center;
         border-radius: 15px 0px 15px 15px;
     }
@@ -545,7 +526,7 @@ strong + a{
         display: none;
     }
     .tipo_pagamento_info{
-        width: 192px;
+        width: 145px;
     }
     .tipo_pagamento_info + span{
         position: absolute;
@@ -553,10 +534,10 @@ strong + a{
         background-color: rgb(70, 70, 255);
         color: white;
         padding: 5px;
-        height: 50px;
+        height: 80px;
         width: 196px;
-        left: 233px;
-        top: 440px;
+        left: 225px;
+        top: 342px;
         text-align: center;
         border-radius: 0px 15px 15px 15px;
     }
