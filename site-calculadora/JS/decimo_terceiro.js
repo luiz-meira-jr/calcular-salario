@@ -1,3 +1,5 @@
+
+
 function calcular_decimo(){
     
     /////// ENTRADA ///////
@@ -10,6 +12,7 @@ function calcular_decimo(){
     var n1 = Number(campo_salario_bruto.value)
     var n2 = Number(campo_horas_extras.value)
     var n3 = Number(campo_meses_trabalhados.value)
+    var n4 = Number(campo_tipo_pagamento.value)
 
     ///////  SAÍDA  ///////
 
@@ -60,6 +63,23 @@ function calcular_decimo(){
     var desconto_inss3 = decimo_terceiro_s_desconto_horas - inss_12
     var desconto_inss4 = decimo_terceiro_s_desconto_horas - inss_14
 
+    /////// CÁLCULO DÉCIMO TERCEIRO PRIMEIRA PARCELA ///////
+
+    var primeira_parcela = decimo_terceiro_s_desconto / 2
+    var horas_div_2 = n2 / 2
+    var primeira_parcela_horas = primeira_parcela + horas_div_2
+
+    /////// CÁLCULO DÉCIMO TERCEIRO SEGUNDA PARCELA ///////
+    
+    var segunda_parcela_1 = salario_c_desconto1 - valor_primeira_parcela_horas
+    var segunda_parcela_2 = salario_c_desconto2 - valor_primeira_parcela_horas
+    var segunda_parcela_3 = salario_9_7_5 - valor_primeira_parcela_horas
+    var segunda_parcela_4 = salario_12_7_5 - valor_primeira_parcela_horas
+    var segunda_parcela_5 = salario_12_15 - valor_primeira_parcela_horas
+    var segunda_parcela_6 = salario_14_15 - valor_primeira_parcela_horas
+    var segunda_parcela_7 = salario_14_22_5 - valor_primeira_parcela_horas
+    var segunda_parcela_8 = salario_14_27_5 - valor_primeira_parcela_horas
+
     /////// CÁLCULO (BRUTO - INSS - IRRF) ///////
 
     var desconto_irrf1_inss2 = desconto_inss2 - irrf_7_5
@@ -92,7 +112,7 @@ function calcular_decimo(){
     var total_descontos_14_22_5 = inss_14 + irrf_22_5
     var total_descontos_14_27_5 = inss_14 + irrf_27_5
 
-    /////// REFORMULANDO SOMA DOS DESCONTOS ///////
+    /////// REFORMULANDO SOMA DOS DESCONTOS PARCELA ÚNICA ///////
 
     var refor_descontos_9_7_5 = total_descontos_9_7_5.toFixed(2)
     var refor_descontos_12_7_5 = total_descontos_12_7_5.toFixed(2)
@@ -100,6 +120,19 @@ function calcular_decimo(){
     var refor_descontos_14_15 = total_descontos_14_15.toFixed(2)
     var refor_descontos_14_22_5 = total_descontos_14_22_5.toFixed(2)
     var refor_descontos_14_27_5 = total_descontos_14_27_5.toFixed(2)
+
+    /////// REFORMULANDO SOMA DOS DESCONTOS PARCELA ÚNICA ///////
+
+    var descontos_pu_9_7_5 = ((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 9) + ((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 7.5).toFixed(2)
+    var refor_descontos_12_7_5 = total_descontos_12_7_5.toFixed(2)
+    var refor_descontos_12_15 = total_descontos_12_15.toFixed(2)
+    var refor_descontos_14_15 = total_descontos_14_15.toFixed(2)
+    var refor_descontos_14_22_5 = total_descontos_14_22_5.toFixed(2)
+    var refor_descontos_14_27_5 = total_descontos_14_27_5.toFixed(2)
+
+    /////// REFORMULANDO SOMA DOS DESCONTOS PARCELA ÚNICA ///////
+
+
 
     /////// REFORMULANDO VALOR FINAL ///////
 
@@ -124,10 +157,21 @@ function calcular_decimo(){
 
     var valor_decimo_terceiro_s_desconto_horas = decimo_terceiro_s_desconto_horas.toFixed(2)
 
+    /////// REFORMULANDO DÉCIMO TERCEIRO PRIMEIRA PARCELA ///////
+
+    var valor_primeira_parcela = primeira_parcela.toFixed(2)
+    var valor_horas_div_2 = horas_div_2.toFixed(2)
+    var valor_primeira_parcela_horas = primeira_parcela_horas.toFixed(2)
+
+    /////// REFORMULANDO DÉCIMO TERCEIRO SEGUNDA PARCELA ///////
+
+    var valor_segunda_parcela_1 = segunda_parcela_1.toFixed(2)
+    // INSS //
     var in1 = '7,5%'
     var in2 = '9%'
     var in3 = '12%'
     var in4 = '14%'
+    // IRRF //
     var ir1 = '7,5%'
     var ir2 = '15%'
     var ir3 = '22,5%'
@@ -135,8 +179,16 @@ function calcular_decimo(){
 
     var art2 = document.getElementById('resultados_decimo_terceiro')
     var referencias1 = document.getElementById('referencias')
-        // DESCONTOS INSS
-    if (decimo_terceiro_s_desconto_horas <= 1100){
+    
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////                                 ///////////////////////////////////////
+        //////////////////////////////////////////                                 ///////////////////////////////////////
+        //////////////////////////////////////////  DÉCIMO TERCEIRO PARCELA ÚNICA  ///////////////////////////////////////
+        //////////////////////////////////////////                                 ///////////////////////////////////////
+        //////////////////////////////////////////                                 ///////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    if (decimo_terceiro_s_desconto_horas <= 1100 && n4 == 1){
         salario_bruto1.innerText = '-'
         salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
         salario_bruto3.innerText = '-'
@@ -156,7 +208,7 @@ function calcular_decimo(){
         art2.style.display = 'block'
         referencias1.style.top = '750px'
         // DESCONTOS INSS
-    } else if (decimo_terceiro_s_desconto_horas > 1100 && decimo_terceiro_s_desconto_horas <= 1903.98){
+    } else if (decimo_terceiro_s_desconto_horas > 1100 && decimo_terceiro_s_desconto_horas <= 1903.98 && n4 == 1){
         salario_bruto1.innerText = '-'
         salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
         salario_bruto3.innerText = '-'
@@ -176,7 +228,7 @@ function calcular_decimo(){
         art2.style.display = 'block'
         referencias1.style.top = '750px'
         // DESCONTOS IRRF    
-    } else if (decimo_terceiro_s_desconto_horas > 1903.98 && decimo_terceiro_s_desconto_horas <= 2203.48){
+    } else if (decimo_terceiro_s_desconto_horas > 1903.98 && decimo_terceiro_s_desconto_horas <= 2203.48 && n4 == 1){
         salario_bruto1.innerText = '-'
         salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
         salario_bruto3.innerText = '-'
@@ -196,7 +248,7 @@ function calcular_decimo(){
         art2.style.display = 'block'
         referencias1.style.top = '750px'
         // DESCONTOS INSS
-    } else if (decimo_terceiro_s_desconto_horas > 2203.48 && decimo_terceiro_s_desconto_horas <= 2826.65){
+    } else if (decimo_terceiro_s_desconto_horas > 2203.48 && decimo_terceiro_s_desconto_horas <= 2826.65 && n4 == 1){
         salario_bruto1.innerText = '-'
         salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
         salario_bruto3.innerText = '-'
@@ -216,7 +268,7 @@ function calcular_decimo(){
         art2.style.display = 'block'
         referencias1.style.top = '750px'
 
-    } else if (decimo_terceiro_s_desconto_horas > 2826.65 && decimo_terceiro_s_desconto_horas <= 3305.23){
+    } else if (decimo_terceiro_s_desconto_horas > 2826.65 && decimo_terceiro_s_desconto_horas <= 3305.23 && n4 == 1){
         salario_bruto1.innerText = '-'
         salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
         salario_bruto3.innerText = '-'
@@ -236,7 +288,7 @@ function calcular_decimo(){
         art2.style.display = 'block'
         referencias1.style.top = '750px'
 
-    } else if (decimo_terceiro_s_desconto_horas > 3305.23 && decimo_terceiro_s_desconto_horas <= 3751.05){
+    } else if (decimo_terceiro_s_desconto_horas > 3305.23 && decimo_terceiro_s_desconto_horas <= 3751.05 && n4 == 1){
         salario_bruto1.innerText = '-'
         salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
         salario_bruto3.innerText = '-'
@@ -256,7 +308,7 @@ function calcular_decimo(){
         art2.style.display = 'block'
         referencias1.style.top = '750px'
         // DESCONTOS INSS
-    } else if (decimo_terceiro_s_desconto_horas > 3751.05 && decimo_terceiro_s_desconto_horas < 4664.68){
+    } else if (decimo_terceiro_s_desconto_horas > 3751.05 && decimo_terceiro_s_desconto_horas < 4664.68 && n4 == 1){
         salario_bruto1.innerText = '-'
         salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
         salario_bruto3.innerText = '-'
@@ -276,7 +328,364 @@ function calcular_decimo(){
         art2.style.display = 'block'
         referencias1.style.top = '750px'
         // DESCONTOS IRRF
-    } else if (decimo_terceiro_s_desconto_horas >= 4664.68 && decimo_terceiro_s_desconto_horas <= 6433.57){
+    } else if (decimo_terceiro_s_desconto_horas >= 4664.68 && decimo_terceiro_s_desconto_horas <= 6433.57 && n4 == 1){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = `${in4}`
+        inss2.innerText = '-'
+        inss3.innerText = `R$ ${valor_desconto_14}`
+        irrf1.innerHTML = `${ir4}`
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = `R$ ${valor_desconto_irrf4}`
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_decimo_terceiro_s_desconto_horas}`
+        consolidado3.innerText = `R$ ${refor_descontos_14_27_5}`
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${salario_14_27_5}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+    }
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////                                  //////////////////////////////////////
+        //////////////////////////////////////////                                  //////////////////////////////////////
+        ////////////////////////////////////////// DÉCIMO TERCEIRO PRIMEIRA PARCELA //////////////////////////////////////
+        //////////////////////////////////////////                                  //////////////////////////////////////
+        //////////////////////////////////////////                                  //////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    else if (decimo_terceiro_s_desconto_horas <= 1100 && n4 == 2){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_primeira_parcela}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas_div_2}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = '-'
+        inss2.innerText = '-'
+        inss3.innerText = '-'
+        irrf1.innerHTML = '-'
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = '-'
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_primeira_parcela_horas}`
+        consolidado3.innerText = '-'
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${valor_primeira_parcela_horas}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+        // DESCONTOS INSS
+    } else if (decimo_terceiro_s_desconto_horas > 1100 && decimo_terceiro_s_desconto_horas <= 1903.98 && n4 == 2){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_primeira_parcela}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas_div_2}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = '-'
+        inss2.innerText = '-'
+        inss3.innerText = '-'
+        irrf1.innerHTML = '-'
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = '-'
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_primeira_parcela_horas}`
+        consolidado3.innerText = '-'
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${valor_primeira_parcela_horas}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+        // DESCONTOS IRRF    
+    } else if (decimo_terceiro_s_desconto_horas > 1903.98 && decimo_terceiro_s_desconto_horas <= 2203.48 && n4 == 2){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_primeira_parcela}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas_div_2}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = '-'
+        inss2.innerText = '-'
+        inss3.innerText = '-'
+        irrf1.innerHTML = '-'
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = '-'
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_primeira_parcela_horas}`
+        consolidado3.innerText = '-'
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${valor_primeira_parcela_horas}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+        // DESCONTOS INSS
+    } else if (decimo_terceiro_s_desconto_horas > 2203.48 && decimo_terceiro_s_desconto_horas <= 2826.65 && n4 == 2){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_primeira_parcela}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas_div_2}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = '-'
+        inss2.innerText = '-'
+        inss3.innerText = '-'
+        irrf1.innerHTML = '-'
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = '-'
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_primeira_parcela_horas}`
+        consolidado3.innerText = '-'
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${valor_primeira_parcela_horas}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+
+    } else if (decimo_terceiro_s_desconto_horas > 2826.65 && decimo_terceiro_s_desconto_horas <= 3305.23 && n4 == 2){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_primeira_parcela}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas_div_2}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = '-'
+        inss2.innerText = '-'
+        inss3.innerText = '-'
+        irrf1.innerHTML = '-'
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = '-'
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_primeira_parcela_horas}`
+        consolidado3.innerText = '-'
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${valor_primeira_parcela_horas}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+
+    } else if (decimo_terceiro_s_desconto_horas > 3305.23 && decimo_terceiro_s_desconto_horas <= 3751.05 && n4 == 2){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_primeira_parcela}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas_div_2}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = '-'
+        inss2.innerText = '-'
+        inss3.innerText = '-'
+        irrf1.innerHTML = '-'
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = '-'
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_primeira_parcela_horas}`
+        consolidado3.innerText = '-'
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${valor_primeira_parcela_horas}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+        // DESCONTOS INSS
+    } else if (decimo_terceiro_s_desconto_horas > 3751.05 && decimo_terceiro_s_desconto_horas < 4664.68 && n4 == 2){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_primeira_parcela}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas_div_2}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = '-'
+        inss2.innerText = '-'
+        inss3.innerText = '-'
+        irrf1.innerHTML = '-'
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = '-'
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_primeira_parcela_horas}`
+        consolidado3.innerText = '-'
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${valor_primeira_parcela_horas}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+        // DESCONTOS IRRF
+    } else if (decimo_terceiro_s_desconto_horas >= 4664.68 && decimo_terceiro_s_desconto_horas <= 6433.57 && n4 == 2){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_primeira_parcela}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas_div_2}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = '-'
+        inss2.innerText = '-'
+        inss3.innerText = '-'
+        irrf1.innerHTML = '-'
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = '-'
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_primeira_parcela_horas}`
+        consolidado3.innerText = '-'
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${valor_primeira_parcela_horas}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+    }
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////                                 ///////////////////////////////////////
+        //////////////////////////////////////////                                 ///////////////////////////////////////
+        ////////////////////////////////////////// DÉCIMO TERCEIRO SEGUNDA PARCELA ///////////////////////////////////////
+        //////////////////////////////////////////                                 ///////////////////////////////////////
+        //////////////////////////////////////////                                 ///////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    else if (decimo_terceiro_s_desconto_horas <= 1100 && n4 == 3){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto / 2}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas / 2}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = `${in1}`
+        inss2.innerText = '-'
+        inss3.innerText = `R$ ${((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 7.5).toFixed(2)}`
+        irrf1.innerHTML = '0%'
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = '<strong>ISENTO</strong>'
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2}`
+        consolidado3.innerText = `R$ ${((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 7.5).toFixed(2)}`
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${(valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2)-((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 7.5).toFixed(2)}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+        // DESCONTOS INSS
+    } else if (decimo_terceiro_s_desconto_horas > 1100 && decimo_terceiro_s_desconto_horas <= 1903.98 && n4 == 3){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto / 2}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas / 2}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = `${in2}`
+        inss2.innerText = '-'
+        inss3.innerText = `R$ ${((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 9).toFixed(2)}`
+        irrf1.innerHTML = '0%'
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = '<strong>ISENTO</strong>'
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${(valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2).toFixed(2)}`
+        consolidado3.innerText = `R$ ${((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 9).toFixed(2)}`
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2)-((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 9)).toFixed(2)}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+        // DESCONTOS IRRF    
+    } else if (decimo_terceiro_s_desconto_horas > 1903.98 && decimo_terceiro_s_desconto_horas <= 2203.48 && n4 == 3){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto / 2}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas / 2}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = `${in2}`
+        inss2.innerText = '-'
+        inss3.innerText = `R$ ${((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 9).toFixed(2)}`
+        irrf1.innerHTML = `${ir1}`
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = `${((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 7.5).toFixed(2)}`
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${(valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2).toFixed(2)}`
+        consolidado3.innerText = `R$ ${(((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 9) + ((valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) / 100 * 7.5)).toFixed(2)}`
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${(valor_decimo_terceiro_s_desconto / 2 + valor_horas / 2) + descontos_pu_9_7_5}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = `${in2}`
+        inss2.innerText = '-'
+        inss3.innerText = `R$ ${valor_desconto_9}`
+        irrf1.innerHTML = `${ir1}`
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = `R$ ${valor_desconto_irrf1}`
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_decimo_terceiro_s_desconto_horas}`
+        consolidado3.innerText = `R$ ${refor_descontos_9_7_5}`
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${salario_9_7_5}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+        // DESCONTOS INSS
+    } else if (decimo_terceiro_s_desconto_horas > 2203.48 && decimo_terceiro_s_desconto_horas <= 2826.65 && n4 == 3){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = `${in3}`
+        inss2.innerText = '-'
+        inss3.innerText = `R$ ${valor_desconto_12}`
+        irrf1.innerHTML = `${ir1}`
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = `R$ ${valor_desconto_irrf1}`
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_decimo_terceiro_s_desconto_horas}`
+        consolidado3.innerText = `R$ ${refor_descontos_12_7_5}`
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${salario_12_7_5}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+
+    } else if (decimo_terceiro_s_desconto_horas > 2826.65 && decimo_terceiro_s_desconto_horas <= 3305.23 && n4 == 3){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = `${in3}`
+        inss2.innerText = '-'
+        inss3.innerText = `R$ ${valor_desconto_12}`
+        irrf1.innerHTML = `${ir2}`
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = `R$ ${valor_desconto_irrf2}`
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_decimo_terceiro_s_desconto_horas}`
+        consolidado3.innerText = `R$ ${refor_descontos_12_15}`
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${salario_12_15}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+
+    } else if (decimo_terceiro_s_desconto_horas > 3305.23 && decimo_terceiro_s_desconto_horas <= 3751.05 && n4 == 3){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = `${in4}`
+        inss2.innerText = '-'
+        inss3.innerText = `R$ ${valor_desconto_14}`
+        irrf1.innerHTML = `${ir2}`
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = `R$ ${valor_desconto_irrf2}`
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_decimo_terceiro_s_desconto_horas}`
+        consolidado3.innerText = `R$ ${refor_descontos_14_15}`
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${salario_14_15}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+        // DESCONTOS INSS
+    } else if (decimo_terceiro_s_desconto_horas > 3751.05 && decimo_terceiro_s_desconto_horas < 4664.68 && n4 == 3){
+        salario_bruto1.innerText = '-'
+        salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
+        salario_bruto3.innerText = '-'
+        horas_extras1.innerText = '-'
+        horas_extras2.innerText = `R$ ${valor_horas}`
+        horas_extras3.innerText = '-'
+        inss1.innerText = `${in4}`
+        inss2.innerText = '-'
+        inss3.innerText = `R$ ${valor_desconto_14}`
+        irrf1.innerHTML = `${ir3}`
+        irrf2.innerHTML = '-'
+        irrf3.innerHTML = `R$ ${valor_desconto_irrf3}`
+        consolidado1.innerText = '-'
+        consolidado2.innerText = `R$ ${valor_decimo_terceiro_s_desconto_horas}`
+        consolidado3.innerText = `R$ ${refor_descontos_14_22_5}`
+        valor_decimo_terceiro.innerHTML = `<strong>R$ ${salario_14_22_5}</strong>`
+        art2.style.display = 'block'
+        referencias1.style.top = '750px'
+        // DESCONTOS IRRF
+    } else if (decimo_terceiro_s_desconto_horas >= 4664.68 && decimo_terceiro_s_desconto_horas <= 6433.57 && n4 == 3){
         salario_bruto1.innerText = '-'
         salario_bruto2.innerText = `R$ ${valor_decimo_terceiro_s_desconto}`
         salario_bruto3.innerText = '-'
