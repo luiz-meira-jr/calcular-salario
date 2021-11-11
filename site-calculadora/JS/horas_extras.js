@@ -47,7 +47,7 @@ function calcular_horas(){
     total_hora_noturna.innerHTML = `R$ ${vtn3}`
     total_salario_bruto.innerHTML = `<strong>R$ ${vts4}</strong>`
     artigo.style.display = 'block'
-    referencias1.style.top = '750px'
+    referencias1.style.top = '700px'
 
 }
 

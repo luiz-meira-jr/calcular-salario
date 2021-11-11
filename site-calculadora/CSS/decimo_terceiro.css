@@ -29,7 +29,7 @@ li{
     background-color: rgb(40, 40, 255);
     display: inline-block;
     list-style-type: none;
-    margin: 0px 8px 0px 8px;
+    margin: 0px 120px 0px 120px;
     line-height: 50px;
     padding: 0px 10px 0px 10px;
     font-size: 14px;
@@ -233,7 +233,7 @@ div > strong{
 }
 .resultados_decimo_terceiro{
     margin-top: 50px;
-    display: block;
+    display: none;
 }
 article>p{
     font-size: 20px;
@@ -443,6 +443,7 @@ strong + a{
     code li, a{
         text-decoration: none;
         color: black;
+        margin: 0px;
     }
     .menu{
         padding: 0px 0px 10px 20px;
@@ -463,13 +464,12 @@ strong + a{
     0000000000000000000                             0000000000000000000
     */
 
-    div > strong{
+    .calculadora_decimo_terceiro > strong{
         color: black;
-        font-size: 12.5px;
         font-weight: 500;
     }
     .salario_bruto_info{
-        width: 100px;
+        width: 110px;
     }
     .salario_bruto_info + span{
         position: absolute;
@@ -488,7 +488,7 @@ strong + a{
         display: none;
     }
     .horas_extras_info{
-        width: 255px;
+        width: 265px;
     }
     .horas_extras_info + span{
         position: absolute;
@@ -598,7 +598,7 @@ strong + a{
         top: 120px;
         margin: 0px;
         width: 440px;
-        height: 1500px;
+        height: 2200px;
     }
     .h2{
         width: 160px;
@@ -607,10 +607,10 @@ strong + a{
     }
     .resultados_decimo_terceiro{
         margin-top: 0px;
-        display: block;
+        display: none;
     }
     .info1{
-        height: 140px;
+        height: 300px;
         width: 350px;
         border-radius: 15px 15px 15px 15px;
         font-size: 15px;
@@ -622,7 +622,7 @@ strong + a{
         text-align: center;
     }
     .info2{
-        height: 230px;
+        height: 270px;
         width: 350px;
         border-radius: 15px 15px 15px 15px;
         font-size: 15px;
@@ -631,9 +631,10 @@ strong + a{
         left: 45px;
         text-align: center;
         position: relative;
+        top: 25px;
     }
     .info3{
-        height: 140px;
+        height: 310px;
         width: 350px;
         border-radius: 15px 15px 15px 15px;
         font-size: 15px;
@@ -641,23 +642,23 @@ strong + a{
         padding: 10px;
         text-align: center;
         left: 45px;
-        bottom: -25px;
+        top: 50px;
         position: relative;
     }
     .info4{
-        height: 194px;
+        height: 410px;
         width: 350px;
         border-radius: 15px 15px 15px 15px;
         font-size: 15px;
         display: block;
         text-align: center;
         padding: 10px;
-        bottom: -35px;
+        top: 75px;
         left: 45px;
         position: relative;
     }
     .info5{
-        height: 130px;
+        height: 250px;
         width: 350px;
         border-radius: 15px 15px 15px 15px;
         font-size: 15px;
@@ -665,7 +666,7 @@ strong + a{
         padding: 10px;
         text-align: center;
         left: 45px;
-        bottom: -45px;
+        top: 100px;
         position: relative;
     }
     .info6{
@@ -678,7 +679,7 @@ strong + a{
         text-align: center;
         position: relative;
         left: 45px;
-        bottom: -55px;
+        top: 125px;
     }
     .referencia1{
         width: 121px;
